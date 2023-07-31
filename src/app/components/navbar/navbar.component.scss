@@ -1,0 +1,46 @@
+.navbar {
+  width: 25%;
+
+  .profile {
+    display: flex;
+    align-items: center;
+    width: 312px;
+    height: 117px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background: #2b2b4b;
+
+    .imgWrapper {
+      margin: 31px 0px 31px 15px;
+    }
+
+    .name {
+      margin-left: 25px;
+      margin-right: 11px;
+
+      h4 {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+      }
+      .online {
+        color: #45c86d;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+    .arrowWrapper {
+      display: flex;
+      align-items: center;
+      width: 24px;
+      height: 24px;
+
+      .arrowDown {
+        color: #ffffff;
+        width: 14px;
+        height: 9px;
+        margin: 0 5px 0 5px;
+      }
+    }
+  }
+}
