@@ -1,8 +1,12 @@
 <div class="container">
     <div class="wrapper">
         <div class="main-body-content">
-            <app-navbar></app-navbar>
-            <app-card-component></app-card-component>
+            <div class="navbar-outer-wrapper">
+                <app-navbar></app-navbar>
+            </div>
+            <div class="main-content-wrapper">
+                <router-outlet></router-outlet>
+            </div>
         </div>
     </div>
 </div>

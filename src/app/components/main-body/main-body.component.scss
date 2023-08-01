@@ -9,11 +9,11 @@
       display: flex;
       gap: 24px;
 
-      app-navbar {
+      .navbar-outer-wrapper {
         width: calc(25% - 12px);
       }
 
-      app-card-component {
+      .main-content-wrapper {
         width: calc(75% - 12px);
       }
     }
