@@ -7,6 +7,15 @@
 
     .main-body-content {
       display: flex;
+      gap: 24px;
+
+      app-navbar {
+        width: calc(25% - 12px);
+      }
+
+      app-card-component {
+        width: calc(75% - 12px);
+      }
     }
   }
 }
