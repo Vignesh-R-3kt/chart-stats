@@ -7,7 +7,7 @@
     flex-shrink: 0;
     border-radius: 6px;
     background: #2b2b4b;
-    padding:30px 18px 30px 15px;
+    padding: 30px 18px 30px 15px;
 
     .imgWrapper {
       width: 55px;
@@ -92,17 +92,28 @@
           background: none;
           border: none;
           outline: none;
+          cursor: pointer;
         }
 
         .dropdown-toggle-items {
           display: flex;
           flex-direction: column;
           gap: 12px;
+          width: 100%;
 
           li {
             padding: 6px;
             padding-left: 48px;
             position: relative;
+            border-radius: 6px;
+
+            &.active {
+              background: #cccccc;
+
+              a {
+                color: #000033;
+              }
+            }
 
             &::after {
               content: "";
@@ -111,7 +122,7 @@
               height: 7px;
               border-radius: 50%;
               top: 50%;
-              left: 20%;
+              left: 12%;
               transform: translateY(-50%);
               background: #f2994a;
             }
@@ -154,6 +165,14 @@
 
             a {
               color: #ffffff;
+            }
+          }
+
+          .toggle-btn {
+            .icon-wrapper {
+              span {
+                color: #ffffff;
+              }
             }
           }
         }

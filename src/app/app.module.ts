@@ -14,6 +14,10 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { ProgressComponent } from './components/progress/progress.component';
 import { GoalsComponent } from './components/goals/goals.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { GoogleComponent } from './components/projects/google/google.component';
+import { AmazonComponent } from './components/projects/amazon/amazon.component';
+import { FacebookComponent } from './components/projects/facebook/facebook.component';
+import { AirbnbComponent } from './components/projects/airbnb/airbnb.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +33,10 @@ import { SettingsComponent } from './components/settings/settings.component';
     ProgressComponent,
     GoalsComponent,
     SettingsComponent,
+    GoogleComponent,
+    AmazonComponent,
+    FacebookComponent,
+    AirbnbComponent,
   ],
   imports: [
     BrowserModule,
