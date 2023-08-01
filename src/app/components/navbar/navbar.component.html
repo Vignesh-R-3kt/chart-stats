@@ -17,27 +17,27 @@
             <span class="count-text">16</span>
         </div>
         <ul class="navlinks-wrapper">
-            <li class="navlink" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <li class="navlink" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="unsetToggler()">
                 <div class="icon-wrapper">
                     <img src="../../../assets/images/home.png" alt="home-icon">
                     <a href="" routerLink="home"> Home</a>
                 </div>
             </li>
-            <li class="navlink" routerLinkActive="active">
+            <li class="navlink" routerLinkActive="active" (click)="unsetToggler()">
                 <div class="icon-wrapper">
                     <img src="../../../assets/images/calendar.png" alt="calender-icon">
                     <a href="" routerLink="calender"> Calender</a>
                 </div>
             </li>
-            <li class="navlink" routerLinkActive="active">
+            <li class="navlink" routerLinkActive="active" (click)="unsetToggler()">
                 <div class="icon-wrapper">
                     <img src="../../../assets/images/message-icon.png" alt="message-icon">
                     <a href="" routerLink="messages"> Messages</a>
                 </div>
                 <span class="count-text">22</span>
             </li>
-            <li class="navlink" routerLinkActive="active">
-                <button class="toggle-btn" routerLink="projects">
+            <li class="navlink" routerLinkActive="active expand" [ngClass]="{'expand' : isNavbarExpanded}">
+                <button class="toggle-btn" routerLink="projects" (click)="toggleNavbar()">
                     <div class="icon-wrapper">
                         <img src="../../../assets/images/briefcase.svg" alt="message-icon">
                         <span> Projects</span>
@@ -59,19 +59,19 @@
                     </li>
                 </ul>
             </li>
-            <li class="navlink" routerLinkActive="active">
+            <li class="navlink" routerLinkActive="active" (click)="unsetToggler()">
                 <div class="icon-wrapper">
                     <img src="../../../assets/images/bar-chart.svg" alt="progress-icon">
                     <a href="" routerLink="progress"> Progress</a>
                 </div>
             </li>
-            <li class="navlink" routerLinkActive="active">
+            <li class="navlink" routerLinkActive="active" (click)="unsetToggler()">
                 <div class="icon-wrapper">
                     <img src="../../../assets/images/pie-chart.svg" alt="pie-chart-icon">
                     <a href="" routerLink="goals"> Goals</a>
                 </div>
             </li>
-            <li class="navlink" routerLinkActive="active">
+            <li class="navlink" routerLinkActive="active" (click)="unsetToggler()">
                 <div class="icon-wrapper">
                     <img src="../../../assets/images/settings.svg" alt="settings-icon">
                     <a href="" routerLink="settings"> Settings</a>

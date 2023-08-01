@@ -5,6 +5,15 @@ import { Component } from '@angular/core';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent {
 
+export class NavbarComponent {
+  isNavbarExpanded: boolean = false;
+
+  toggleNavbar() {
+    this.isNavbarExpanded = !this.isNavbarExpanded;
+  }
+
+  unsetToggler() {
+    this.isNavbarExpanded = false;
+  }
 }

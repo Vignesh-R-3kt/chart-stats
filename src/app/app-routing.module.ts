@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: "messages", component: MessagesComponent },
   {
     path: "projects", component: ProjectsComponent, children: [
-      { path: "", redirectTo: "google", pathMatch: "full"},
+      { path: "", redirectTo: "google", pathMatch: "full" },
       { path: "google", component: GoogleComponent },
       { path: "amazon", component: AmazonComponent },
       { path: "facebook", component: FacebookComponent },
