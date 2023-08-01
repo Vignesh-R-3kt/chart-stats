@@ -1,6 +1,6 @@
 .navbar {
   width: 100%;
-  
+
   .profile {
     display: flex;
     align-items: center;
@@ -89,6 +89,9 @@
           width: 100%;
           margin-bottom: 18px;
           padding-right: 20px;
+          background: none;
+          border: none;
+          outline: none;
         }
 
         .dropdown-toggle-items {
@@ -148,6 +151,7 @@
             img {
               filter: brightness(1);
             }
+
             a {
               color: #ffffff;
             }
@@ -166,7 +170,8 @@
             filter: sepia(0) brightness(0) invert(1) brightness(0.6);
           }
 
-          a {
+          a,
+          span {
             line-height: 24px;
             color: #8b8d9a;
             font-size: 18px;

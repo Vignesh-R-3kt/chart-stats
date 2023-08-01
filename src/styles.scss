@@ -9,6 +9,15 @@
 body {
   font-family: "Nunito", sans-serif;
   background: #000033;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+
+    &-thumb {
+      border-radius: 10px;
+      background: #cccccc;
+    }
+  }
 }
 
 h1,
