@@ -87,16 +87,19 @@
           justify-content: space-between;
           align-items: center;
           width: 100%;
-          margin-bottom: 18px;
           padding-right: 20px;
           background: none;
           border: none;
           outline: none;
           cursor: pointer;
+
+          .arrow-icon {
+            transition: all 0.4s ease;
+          }
         }
 
         .dropdown-toggle-items {
-          display: flex;
+          display: none;
           flex-direction: column;
           gap: 12px;
           width: 100%;
@@ -169,11 +172,21 @@
           }
 
           .toggle-btn {
+            margin-bottom: 18px;
+
+            .arrow-icon {
+              transform: rotate(180deg);
+            }
+
             .icon-wrapper {
               span {
                 color: #ffffff;
               }
             }
+          }
+
+          .dropdown-toggle-items {
+            display: flex;
           }
         }
 
