@@ -37,10 +37,10 @@
                 <span class="count-text">22</span>
             </li>
             <li class="navlink" routerLinkActive="active">
-                <button class="toggle-btn" routerLink="projects">
+                <!-- <button class="toggle-btn" routerLink="projects">
                     <div class="icon-wrapper">
                         <img src="../../../assets/images/briefcase.svg" alt="message-icon">
-                        <span> Projects</span>
+                        <span>Projects</span>
                     </div>
                     <img src="../../../assets/images/Arrow-Down.png" alt="arrow-icon" class="arrow-icon">
                 </button>
@@ -57,7 +57,33 @@
                     <li routerLinkActive="active">
                         <a href="" routerLink="projects/airbnb">Airbnb</a>
                     </li>
-                </ul>
+                </ul> -->
+                <mat-accordion class="toggle-btn">
+                    <mat-expansion-panel class="expand" (opened)="panelOpenState = true"
+                                         (closed)="panelOpenState = false">
+                      <mat-expansion-panel-header>
+                        <mat-panel-title class="icon-wrapper">
+                            <img src="../../../assets/images/briefcase.svg" alt="message-icon">
+                            Projects
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <ul class="dropdown-toggle-items">
+                        <li routerLinkActive="active">
+                            <a href="" routerLink="projects/google">Google</a>
+                        </li>
+                        <li routerLinkActive="active">
+                            <a href="" routerLink="projects/amazon">Amazon</a>
+                        </li>
+                        <li routerLinkActive="active">
+                            <a href="" routerLink="projects/facebook">Facebook</a>
+                        </li>
+                        <li routerLinkActive="active">
+                            <a href="" routerLink="projects/airbnb">Airbnb</a>
+                        </li>
+                    </ul>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+                  
             </li>
             <li class="navlink" routerLinkActive="active">
                 <div class="icon-wrapper">
