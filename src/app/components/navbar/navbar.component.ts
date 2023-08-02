@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  panelOpenState:any
+  panelOpenState: boolean = false;
+  isNavbarExpanded: boolean = false;
+
+  toggleNavbar() {
+    this.isNavbarExpanded = !this.isNavbarExpanded;
+  }
+
+  unsetToggler() {
+    this.isNavbarExpanded = false;
+  }
 }
