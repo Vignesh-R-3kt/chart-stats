@@ -7,13 +7,4 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
   panelOpenState: boolean = false;
-  isNavbarExpanded: boolean = false;
-
-  toggleNavbar() {
-    this.isNavbarExpanded = !this.isNavbarExpanded;
-  }
-
-  unsetToggler() {
-    this.isNavbarExpanded = false;
-  }
 }

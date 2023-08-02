@@ -172,26 +172,6 @@
           }
         }
 
-        &.expand {
-          .toggle-btn {
-            margin-bottom: 18px;
-
-            .arrow-icon {
-              transform: rotate(180deg);
-            }
-
-            .icon-wrapper {
-              span {
-                color: #ffffff;
-              }
-            }
-          }
-
-          .dropdown-toggle-items {
-            display: flex;
-          }
-        }
-
         .icon-wrapper {
           display: flex;
           align-items: center;
