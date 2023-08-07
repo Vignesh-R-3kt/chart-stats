@@ -34,6 +34,7 @@
       width: 24px;
       height: 24px;
       padding-right: 18px;
+      transition: all 0.4s ease;
 
       .arrowDown {
         color: #ffffff;
@@ -204,4 +205,51 @@
       }
     }
   }
+}
+
+.dropdown-wrapper {
+  position: relative;
+  
+}
+
+.dropdown-content {
+  display: flex;
+  word-wrap: unset;
+  display: none;
+  position: absolute;
+  background: #000033;
+  border-radius: 4px;
+  top: 60px;
+  right: 1px;
+  padding: 12px 10px;
+  transition: all 0.4s ease;
+  
+
+  li {
+    color: #8d91a0;
+    padding: 8px 64px;
+    background: #000033;
+    cursor: pointer;
+    white-space: nowrap;
+
+    &.selected {
+      background: #cccccc;
+      color: #000033;
+      border-radius: 6px;
+    }
+  }
+}
+
+.dropdown-content.active {
+  display: block;
+  color: #8d91a0;
+  text-align: center;
+  font-size: 16px;
+  transition: all 0.4s ease;
+
+}
+
+.arrowWrapper.active {
+  transform: rotate(180deg);
+  transition: all 0.4s ease;
 }

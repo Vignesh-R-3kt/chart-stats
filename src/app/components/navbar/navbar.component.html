@@ -7,8 +7,15 @@
             <h4>Jakeman Mangkoler</h4>
             <span class="online">online</span>
         </div>
-        <div class="arrowWrapper">
-            <img class="arrowDown" src="../../../assets/images/Arrow-Down.png" alt="arrowdown">
+        <div class="dropdown-wrapper">
+            <ul class="dropdown-content" [class.active]="dropdownOpen">
+                <li (click)="selectDropdownItem('Edit Profile')" [class.selected]="isItemSelected('Edit Profile')">Profile
+                    details</li>
+                <li (click)="selectDropdownItem('Logout')" [class.selected]="isItemSelected('Logout')">Logout</li>
+            </ul>
+            <div class="arrowWrapper" [class.active]="dropdownOpen" (click)="toggleDropdown()">
+                <img class="arrowDown" src="../../../assets/images/Arrow-Down.png" alt="arrowdown">
+            </div>
         </div>
     </div>
     <div class="navigation-links-wrapper">
@@ -17,8 +24,7 @@
             <span class="count-text">16</span>
         </div>
         <ul class="navlinks-wrapper">
-            <li class="navlink" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
-                >
+            <li class="navlink" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
                 <div class="icon-wrapper">
                     <img src="../../../assets/images/home.png" alt="home-icon">
                     <a href="" routerLink="home"> Home</a>
@@ -30,7 +36,7 @@
                     <a href="" routerLink="calender"> Calender</a>
                 </div>
             </li>
-            <li class="navlink" routerLinkActive="active" >
+            <li class="navlink" routerLinkActive="active">
                 <div class="icon-wrapper">
                     <img src="../../../assets/images/message-icon.png" alt="message-icon">
                     <a href="" routerLink="messages"> Messages</a>
@@ -65,7 +71,7 @@
                 </mat-accordion>
 
             </li>
-            <li class="navlink" routerLinkActive="active" >
+            <li class="navlink" routerLinkActive="active">
                 <div class="icon-wrapper">
                     <img src="../../../assets/images/bar-chart.svg" alt="progress-icon">
                     <a href="" routerLink="progress"> Progress</a>
