@@ -83,6 +83,10 @@
         flex-wrap: wrap;
         cursor: pointer;
 
+        &:hover {
+          background: #00003355;
+        }
+
         .toggle-btn {
           display: flex;
           justify-content: space-between;
