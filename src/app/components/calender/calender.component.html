@@ -13,13 +13,15 @@
     <div class="modal-wrapper">
         <div class="modal-inner-content">
             <div class="modal-header">
-                <h1>Modal header</h1>
+                <h2>Add Project Details</h2>
+                <button>X</button>
             </div>
             <div class="modal-body">
                 <h1>Modal body</h1>
             </div>
             <div class="modal-footer">
-                <button (click)="closePopup()">Close Popup</button>
+                <button (click)="closePopup()" class="close-btn">Cancel</button>
+                <button class="submit-btn">Submit</button>
             </div>
         </div>
         <div class="overlay" (click)="closePopup()">
