@@ -11,6 +11,7 @@ import { GoogleComponent } from './components/projects/google/google.component';
 import { AmazonComponent } from './components/projects/amazon/amazon.component';
 import { FacebookComponent } from './components/projects/facebook/facebook.component';
 import { AirbnbComponent } from './components/projects/airbnb/airbnb.component';
+import { ProfileScreenComponent } from './components/profile-screen/profile-screen.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: "progress", component: ProgressComponent },
   { path: "goals", component: GoalsComponent },
   { path: "settings", component: SettingsComponent },
+  { path: "profile", component: ProfileScreenComponent },
   { path: "**", redirectTo: "home" },
 ];
 

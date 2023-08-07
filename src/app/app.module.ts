@@ -19,6 +19,7 @@ import { GoogleComponent } from './components/projects/google/google.component';
 import { AmazonComponent } from './components/projects/amazon/amazon.component';
 import { FacebookComponent } from './components/projects/facebook/facebook.component';
 import { AirbnbComponent } from './components/projects/airbnb/airbnb.component';
+import { ProfileScreenComponent } from './components/profile-screen/profile-screen.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { AirbnbComponent } from './components/projects/airbnb/airbnb.component';
     AmazonComponent,
     FacebookComponent,
     AirbnbComponent,
+    ProfileScreenComponent,
   ],
   imports: [
     BrowserModule,

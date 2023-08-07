@@ -161,6 +161,8 @@
           border-radius: 4px;
 
           .icon-wrapper {
+            color: #ffffff;
+
             img {
               filter: brightness(1);
             }
@@ -175,6 +177,9 @@
           display: flex;
           align-items: center;
           gap: 10px;
+          color: #8b8d9a;
+          font-size: 18px;
+          font-weight: 600;
 
           img {
             width: 24px;

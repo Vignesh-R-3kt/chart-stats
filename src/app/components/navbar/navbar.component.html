@@ -9,10 +9,10 @@
         </div>
         <div class="dropdown-wrapper">
             <ul class="dropdown-content" [class.active]="dropdownOpen">
-                <li (click)="selectDropdownItem('Edit Profile')" [class.selected]="isItemSelected('Edit Profile')">
+                <li (click)="selectDropdownItem('Edit Profile')" [class.selected]="isItemSelected('Edit Profile')" routerLink="profile">
                     Profile
                     details</li>
-                <li (click)="selectDropdownItem('Logout')" [class.selected]="isItemSelected('Logout')">Logout</li>
+                <li (click)="selectDropdownItem('Logout')" [class.selected]="isItemSelected('Logout')" routerLink="profile">Logout</li>
             </ul>
             <div class="arrowWrapper" [class.active]="dropdownOpen" (click)="toggleDropdown()">
                 <img class="arrowDown" src="../../../assets/images/icons8-hamburger-menu-50.png" alt="arrowdown">
