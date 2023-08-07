@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./calender.component.scss']
 })
 export class CalenderComponent {
+  isPopupOpen: boolean = false;
 
+  openPopup() {
+    this.isPopupOpen = true;
+  }
+
+  closePopup() {
+    this.isPopupOpen = false;
+  }
 }

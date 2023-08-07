@@ -1,1 +1,29 @@
-<p>calender works!</p>
+<div class="container">
+    <div class="wrapper">
+        <div class="btn-wrapper">
+            <button (click)="openPopup()">
+                <img src="../../../assets/images/plus-icon.png" alt="plus-icon">
+                <span>Add the Schedule</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="custom-modal" [ngClass]="{'opened':isPopupOpen}">
+    <div class="modal-wrapper">
+        <div class="modal-inner-content">
+            <div class="modal-header">
+                <h1>Modal header</h1>
+            </div>
+            <div class="modal-body">
+                <h1>Modal body</h1>
+            </div>
+            <div class="modal-footer">
+                <button (click)="closePopup()">Close Popup</button>
+            </div>
+        </div>
+        <div class="overlay" (click)="closePopup()">
+
+        </div>
+    </div>
+</div>
