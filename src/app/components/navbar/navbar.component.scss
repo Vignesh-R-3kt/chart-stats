@@ -31,16 +31,15 @@
     .arrowWrapper {
       display: flex;
       align-items: center;
-      width: 24px;
-      height: 24px;
-      padding-right: 18px;
       transition: all 0.4s ease;
+      cursor: pointer;
+      width: 28px;
+      height: 28px;
 
-      .arrowDown {
-        color: #ffffff;
-        width: 14px;
-        height: 9px;
-        margin: 0 5px 0 5px;
+      img {
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
       }
     }
   }
@@ -100,7 +99,6 @@
         }
 
         .dropdown-toggle-items {
-          // display: none;
           flex-direction: column;
           gap: 12px;
           width: 100%;
@@ -218,8 +216,8 @@
   position: absolute;
   background: #000033;
   border-radius: 4px;
-  top: 30px;
-  right: -4px;
+  top: 40px;
+  right: 0px;
   padding: 6px 0;
   transition: all 0.4s ease;
   border: 1px solid #cecbcb6b;
@@ -261,10 +259,5 @@
   color: #8d91a0;
   text-align: center;
   font-size: 16px;
-  transition: all 0.4s ease;
-}
-
-.arrowWrapper.active {
-  transform: rotate(180deg);
   transition: all 0.4s ease;
 }
