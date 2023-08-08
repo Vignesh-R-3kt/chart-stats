@@ -12,7 +12,7 @@ export class CalenderComponent implements OnInit {
   todayDate: Date = new Date();
   startDate: Date = new Date();
 
-  tableDate: any = "";
+  tableData: any = "";
 
   constructor(private fb: FormBuilder, private http: ApiService) { }
 
@@ -30,7 +30,13 @@ export class CalenderComponent implements OnInit {
 
   fetchTableData() {
     this.http.fetchAllData().subscribe((res: any) => {
-      this.tableDate = res;
+      this.tableData = res;
+    })
+  }
+
+  deleteDate(id:number) {
+    this.http.deleteData(id).subscribe((res:any) => {
+      this.fetchTableData();
     })
   }
 

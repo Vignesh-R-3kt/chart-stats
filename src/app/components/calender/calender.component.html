@@ -44,7 +44,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let data of tableDate; let i = index">
+            <tr *ngFor="let data of tableData; let i = index">
                 <td>
                     {{ i + 1 }}
                 </td>
@@ -70,9 +70,12 @@
                     -
                 </td>
                 <td>
-                    <button>D</button>
+                    <button (click)="deleteDate(data.id)">D</button>
                     <button>E</button>
                 </td>
+            </tr>
+            <tr *ngIf="!tableData.length">
+                <td colspan="9">No Data Available, please add projects</td>
             </tr>
         </tbody>
     </table>

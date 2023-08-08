@@ -18,4 +18,8 @@ export class ApiService {
     let options = { headers: new HttpHeaders().set('Content-Type', 'application/json') };
     return this.api.post(`http://${this.baseUrl}/projects`, JSON.stringify(data), options);
   }
+
+  deleteData(id: number) {
+    return this.api.delete(`http://${this.baseUrl}/projects/${id}`);
+  }
 }
