@@ -9,6 +9,78 @@
     </div>
 </div>
 
+<!-- Table Starts -->
+<div class="projects-table">
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 50px;">
+                    Sl No
+                </th>
+                <th style="width: 100px;">
+                    Project Name
+                </th>
+                <th style="width: 100px;">
+                    Project Owner
+                </th>
+                <th style="width: 100px;">
+                    Project Lead
+                </th>
+                <th style="width: 100px;">
+                    Start Date
+                </th>
+                <th style="width: 100px;">
+                    End Date
+                </th>
+                <th style="width: 150px;">
+                    Description
+                </th>
+                <th style="width: 100px;">
+                    Project stack
+                </th>
+                <th style="width: 100px;">
+                    Actions
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of tableDate; let i = index">
+                <td>
+                    {{ i + 1 }}
+                </td>
+                <td>
+                    {{ data.projectName }}
+                </td>
+                <td>
+                    {{ data.projectOwner }}
+                </td>
+                <td>
+                    -
+                </td>
+                <td>
+                    {{ data.startDate }}
+                </td>
+                <td>
+                    {{ data.endDate }}
+                </td>
+                <td>
+                    {{ data.description }}
+                </td>
+                <td>
+                    -
+                </td>
+                <td>
+                    <button>D</button>
+                    <button>E</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Table Ends -->
+
+<!-- Custom modal Popup -->
 <div class="custom-modal" [ngClass]="{'opened':isPopupOpen}">
     <div class="modal-wrapper">
         <div class="modal-inner-content">

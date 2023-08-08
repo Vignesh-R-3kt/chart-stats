@@ -12,6 +12,8 @@ export class CalenderComponent implements OnInit {
   todayDate: Date = new Date();
   startDate: Date = new Date();
 
+  tableDate: any = "";
+
   constructor(private fb: FormBuilder, private http: ApiService) { }
 
   projectForm = this.fb.group({
@@ -23,23 +25,27 @@ export class CalenderComponent implements OnInit {
   });
 
   ngOnInit(): void {
+    this.fetchTableData();
+  };
+
+  fetchTableData() {
     this.http.fetchAllData().subscribe((res: any) => {
-      console.log(res);
+      this.tableDate = res;
     })
   }
 
   openPopup() {
     this.isPopupOpen = true;
-  }
+  };
 
   closePopup() {
     this.isPopupOpen = false;
-  }
+  };
 
   updateEndDate(e: any) {
     const startDate = new Date(e.target.value);
     this.startDate = startDate;
-  }
+  };
 
   fetchFormData(e: any) {
     e.preventDefault();
@@ -55,6 +61,7 @@ export class CalenderComponent implements OnInit {
     this.http.sendDataToDB(projectDetails).subscribe((res) => {
       this.projectForm.reset();
       this.closePopup();
+      this.fetchTableData();
     });
-  }
+  };
 }

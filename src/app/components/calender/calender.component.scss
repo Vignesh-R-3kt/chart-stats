@@ -230,3 +230,27 @@
     transform: translateY(0);
   }
 }
+
+
+// Temp Styling
+table {
+  margin-top: 28px;
+  text-align: center;
+  background: #ffffff;
+  width: 100%;
+
+  th  {
+    padding: 8px;
+  }
+
+  td {
+    padding: 8px;
+  }
+}
+
+table, td, th {
+  // color: #ffffff;
+  border: 1px solid #cccccc;
+  border-collapse: collapse;
+}
+
