@@ -28,31 +28,37 @@ export class CalenderComponent implements OnInit {
     this.fetchTableData();
   };
 
+  // Metho to fetch all data table
   fetchTableData() {
     this.http.fetchAllData().subscribe((res: any) => {
       this.tableData = res;
     })
   }
 
-  deleteDate(id:number) {
-    this.http.deleteData(id).subscribe((res:any) => {
+  // Method to delete data
+  deleteDate(id: number) {
+    this.http.deleteData(id).subscribe((res: any) => {
       this.fetchTableData();
     })
   }
 
+  // Method to open popup
   openPopup() {
     this.isPopupOpen = true;
   };
 
+  // Method to close popup
   closePopup() {
     this.isPopupOpen = false;
   };
 
+  // Method to update EndData based on user entry
   updateEndDate(e: any) {
     const startDate = new Date(e.target.value);
     this.startDate = startDate;
   };
 
+  // Method to fetch form data on submit
   fetchFormData(e: any) {
     e.preventDefault();
     const formData = this.projectForm.value;
@@ -64,6 +70,7 @@ export class CalenderComponent implements OnInit {
       "description": formData.description,
     };
 
+    // 
     this.http.sendDataToDB(projectDetails).subscribe((res) => {
       this.projectForm.reset();
       this.closePopup();

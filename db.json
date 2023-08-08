@@ -1,3 +1,28 @@
 {
-  "projects": []
+  "projects": [
+    {
+      "projectName": "saccsacasc",
+      "projectOwner": "saccsacasc",
+      "startDate": "8/11/2023",
+      "endDate": "8/16/2023",
+      "description": "sacsacsacascsacasc",
+      "id": 1
+    },
+    {
+      "projectName": "ascasccsac",
+      "projectOwner": "sacascasc",
+      "startDate": "8/18/2023",
+      "endDate": "8/23/2023",
+      "description": "asccascsacsacascsac",
+      "id": 2
+    },
+    {
+      "projectName": "aaaaaaaaaaaaaaaaaaaaaaaa",
+      "projectOwner": "vvvvvvvvvvvvvvvvvvvvv",
+      "startDate": "8/24/2023",
+      "endDate": "8/30/2023",
+      "description": "vvvvvvvvvvvvvvvvvvvvvvvvvvvvvv",
+      "id": 3
+    }
+  ]
 }
