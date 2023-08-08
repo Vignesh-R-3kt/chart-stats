@@ -281,6 +281,7 @@
 
 .mat-expansion-panel-header {
   background: #2B2B4B;
+  box-shadow: none;
 }
 
 .navlink .active {
@@ -303,5 +304,15 @@
   }
 }
 
+.mat-expansion-panel-header-0 {
+  box-shadow: none !important;
+}
 
+.toggle-btn {
+  padding: 0 !important;
+}
+
+.mat-expansion-panel{
+  box-shadow: none;
+} 
 
