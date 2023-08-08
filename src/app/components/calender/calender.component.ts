@@ -37,5 +37,10 @@ export class CalenderComponent {
   fetchFormData(e: any) {
     e.preventDefault();
     console.log(this.projectForm.value);
+
+
+    // Reset form
+    this.projectForm.reset();
+    this.closePopup();
   }
 }
