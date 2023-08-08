@@ -106,6 +106,13 @@
           font-weight: 500;
         }
 
+        .error-text {
+          color: #f25252;
+          margin: 0;
+          text-transform: capitalize;
+          font-size: 14px;
+        }
+
         .project-details {
           display: flex;
           gap: 12px;
@@ -136,6 +143,19 @@
 
           div {
             width: 50%;
+
+            &.disabled {
+              opacity: 0.4;
+              pointer-events: none;
+
+              input {
+                display: none;
+              }
+
+              & * {
+                pointer-events: none !important;
+              }
+            }
           }
         }
 
@@ -182,6 +202,12 @@
 
           &.submit-btn {
             background: #45c86d;
+            cursor: pointer;
+
+            &:disabled {
+              cursor: unset;
+              opacity: 0.3;
+            }
           }
         }
       }

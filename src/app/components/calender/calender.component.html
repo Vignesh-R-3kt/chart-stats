@@ -12,7 +12,7 @@
 <div class="custom-modal" [ngClass]="{'opened':isPopupOpen}">
     <div class="modal-wrapper">
         <div class="modal-inner-content">
-            <form>
+            <form [formGroup]="projectForm" (submit)="fetchFormData($event)">
                 <div class="modal-header">
                     <h2>Add Project Details</h2>
                     <button (click)="closePopup()" type="button">X</button>
@@ -21,45 +21,55 @@
                     <div class="project-details">
                         <div class="project-name">
                             <label for="" name="project-name">Project Name</label>
-                            <input type="text">
+                            <input type="text" formControlName="projectName">
+                            <p class="error-text"
+                                *ngIf="!projectForm.get('projectName')?.valid && projectForm.get('projectName')?.touched">
+                                Invalid Input</p>
                         </div>
                         <div class="project-owner">
                             <label for="" name="project-owner">Project Owner</label>
-                            <input type="text">
+                            <input type="text" formControlName="projectOwner">
+                            <p class="error-text"
+                                *ngIf="!projectForm.get('projectOwner')?.valid && projectForm.get('projectOwner')?.touched">
+                                Invalid Input</p>
                         </div>
                     </div>
                     <div class="dates-wrapper">
                         <div class="start-date">
                             <mat-form-field>
                                 <mat-label>Start Date</mat-label>
-                                <input matInput [matDatepicker]="dp1" name="start-date" [min]="todayDate">
+                                <input matInput [matDatepicker]="dp1" name="start-date" [min]="todayDate"
+                                    formControlName="startDate" (dateChange)="updateEndDate($event)">
                                 <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
                                 <mat-datepicker #dp1></mat-datepicker>
                             </mat-form-field>
                         </div>
-                        <div class="end-date">
+                        <div class="end-date" [ngClass]="{'disabled' : !projectForm.get('startDate')?.valid }">
                             <mat-form-field>
                                 <mat-label>End Date</mat-label>
-                                <input matInput [matDatepicker]="dp2" name="start-date" [min]="todayDate">
+                                <input matInput [matDatepicker]="dp2" formControlName="endDate" name="end-date"
+                                    [min]="startDate">
                                 <mat-datepicker-toggle matSuffix [for]="dp2"></mat-datepicker-toggle>
                                 <mat-datepicker #dp2></mat-datepicker>
                             </mat-form-field>
                         </div>
                     </div>
                     <div class="description-wrapper">
-                        <label for="">Description</label>
-                        <textarea name="" id="" cols="20" rows="5" name="description"></textarea>
+                        <label for="">Description (Min 15 Char*)</label>
+                        <textarea name="" id="" cols="20" rows="5" name="description"
+                            formControlName="description"></textarea>
+                        <p class="error-text"
+                            *ngIf="!projectForm.get('description')?.valid && projectForm.get('description')?.touched">
+                            Invalid Input</p>
                     </div>
 
                 </div>
                 <div class="modal-footer">
                     <button (click)="closePopup()" type="button" class="close-btn">Cancel</button>
-                    <button class="submit-btn">Submit</button>
+                    <button class="submit-btn" [disabled]="!projectForm.valid">Submit</button>
                 </div>
             </form>
         </div>
-        <div class="overlay" (click)="closePopup()">
-
-        </div>
+        <div class="overlay" (click)="closePopup()"></div>
     </div>
 </div>
