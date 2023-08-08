@@ -71,11 +71,51 @@ ul {
   }
 }
 
-html,
-body {
-  height: 100%;
+// Date Picker
+.mat-mdc-form-field {
+  .mat-mdc-text-field-wrapper {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+  }
 }
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+
+mat-calendar {
+  mat-calendar-header {
+    .mat-calendar-controls {
+      .mdc-button__label {
+        span {
+          color: #757575 !important;
+        }
+      }
+    }
+  }
+
+  table {
+    th {
+      span {
+        all: unset;
+      }
+    }
+
+    td {
+      button {
+        &:hover {
+          .mat-focus-indicator {
+            background-color: #45c86d;
+          }
+        }
+      }
+    }
+  }
+
+  .mat-calendar-body-selected {
+    background-color: #45c86d;
+  }
+}
+
+.mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover
+  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(
+    .mat-calendar-body-comparison-identical
+  ) {
+  background-color: #45c86c2a;
 }

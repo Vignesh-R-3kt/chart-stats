@@ -12,41 +12,51 @@
 <div class="custom-modal" [ngClass]="{'opened':isPopupOpen}">
     <div class="modal-wrapper">
         <div class="modal-inner-content">
-            <div class="modal-header">
-                <h2>Add Project Details</h2>
-                <button (click)="closePopup()">X</button>
-            </div>
-            <div class="modal-body">
-                <form>
+            <form>
+                <div class="modal-header">
+                    <h2>Add Project Details</h2>
+                    <button (click)="closePopup()" type="button">X</button>
+                </div>
+                <div class="modal-body">
                     <div class="project-details">
                         <div class="project-name">
-                            <label for="">Project Name</label>
+                            <label for="" name="project-name">Project Name</label>
                             <input type="text">
                         </div>
                         <div class="project-owner">
-                            <label for="">Project Owner</label>
+                            <label for="" name="project-owner">Project Owner</label>
                             <input type="text">
                         </div>
                     </div>
                     <div class="dates-wrapper">
                         <div class="start-date">
                             <mat-form-field>
-                                <mat-label>Completely disabled</mat-label>
-                                <input matInput [matDatepicker]="dp1">
+                                <mat-label>Start Date</mat-label>
+                                <input matInput [matDatepicker]="dp1" name="start-date" [min]="todayDate">
                                 <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
                                 <mat-datepicker #dp1></mat-datepicker>
                             </mat-form-field>
                         </div>
                         <div class="end-date">
-
+                            <mat-form-field>
+                                <mat-label>End Date</mat-label>
+                                <input matInput [matDatepicker]="dp2" name="start-date" [min]="todayDate">
+                                <mat-datepicker-toggle matSuffix [for]="dp2"></mat-datepicker-toggle>
+                                <mat-datepicker #dp2></mat-datepicker>
+                            </mat-form-field>
                         </div>
                     </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button (click)="closePopup()" class="close-btn">Cancel</button>
-                <button class="submit-btn">Submit</button>
-            </div>
+                    <div class="description-wrapper">
+                        <label for="">Description</label>
+                        <textarea name="" id="" cols="20" rows="5" name="description"></textarea>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button (click)="closePopup()" type="button" class="close-btn">Cancel</button>
+                    <button class="submit-btn">Submit</button>
+                </div>
+            </form>
         </div>
         <div class="overlay" (click)="closePopup()">
 

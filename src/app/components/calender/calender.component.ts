@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class CalenderComponent {
   isPopupOpen: boolean = false;
+  todayDate: Date = new Date();
 
   openPopup() {
     this.isPopupOpen = true;
