@@ -1,7 +1,12 @@
 {
   "projects": [
     {
-      "test" : "data"
+      "projectName": "ascascacas",
+      "projectOwner": "csacsacsacac",
+      "startDate": "8/17/2023",
+      "endDate": "8/23/2023",
+      "description": "ascsacascascascasc",
+      "id": 1
     }
   ]
 }

@@ -21,11 +21,11 @@ export class CalenderComponent implements OnInit {
     endDate: ["", Validators.required],
     description: ["", [Validators.required, Validators.minLength(15)]]
   });
-  
+
   ngOnInit(): void {
-      this.http.fetchAllData().subscribe((res:any) => {
-        console.log(res);
-      })
+    this.http.fetchAllData().subscribe((res: any) => {
+      console.log(res);
+    })
   }
 
   openPopup() {
@@ -43,11 +43,18 @@ export class CalenderComponent implements OnInit {
 
   fetchFormData(e: any) {
     e.preventDefault();
-    console.log(this.projectForm.value);
+    const formData = this.projectForm.value;
+    const projectDetails = {
+      "projectName": formData.projectName,
+      "projectOwner": formData.projectOwner,
+      "startDate": new Date(String(formData.startDate)).toLocaleDateString(),
+      "endDate": new Date(String(formData.endDate)).toLocaleDateString(),
+      "description": formData.description,
+    };
 
-
-    // Reset form
-    this.projectForm.reset();
-    this.closePopup();
+    this.http.sendDataToDB(projectDetails).subscribe((res) => {
+      this.projectForm.reset();
+      this.closePopup();
+    });
   }
 }

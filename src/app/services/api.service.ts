@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -12,5 +12,10 @@ export class ApiService {
 
   fetchAllData() {
     return this.api.get(`http://${this.baseUrl}/projects`);
+  }
+
+  sendDataToDB(data: any) {
+    let options = { headers: new HttpHeaders().set('Content-Type', 'application/json') };
+    return this.api.post(`http://${this.baseUrl}/projects`, JSON.stringify(data), options);
   }
 }
