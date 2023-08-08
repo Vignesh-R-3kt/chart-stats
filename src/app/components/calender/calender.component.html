@@ -14,10 +14,34 @@
         <div class="modal-inner-content">
             <div class="modal-header">
                 <h2>Add Project Details</h2>
-                <button>X</button>
+                <button (click)="closePopup()">X</button>
             </div>
             <div class="modal-body">
-                <h1>Modal body</h1>
+                <form>
+                    <div class="project-details">
+                        <div class="project-name">
+                            <label for="">Project Name</label>
+                            <input type="text">
+                        </div>
+                        <div class="project-owner">
+                            <label for="">Project Owner</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="dates-wrapper">
+                        <div class="start-date">
+                            <mat-form-field>
+                                <mat-label>Completely disabled</mat-label>
+                                <input matInput [matDatepicker]="dp1">
+                                <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
+                                <mat-datepicker #dp1></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <div class="end-date">
+
+                        </div>
+                    </div>
+                </form>
             </div>
             <div class="modal-footer">
                 <button (click)="closePopup()" class="close-btn">Cancel</button>
