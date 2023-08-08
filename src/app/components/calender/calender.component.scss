@@ -256,7 +256,8 @@ table {
   width: 100%;
 
   th {
-    padding: 8px;
+    padding: 8px 16px;
+    white-space: nowrap;
   }
 
   td {
