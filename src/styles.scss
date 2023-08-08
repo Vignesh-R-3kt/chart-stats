@@ -49,17 +49,22 @@ ul {
   .mat-accordion {
     padding: 0;
 
+    .mat-expanded {
+      background: none !important;
+    }
+
     .mat-expansion-panel {
       width: 100%;
 
       &.mat-expanded {
+
         .mat-expansion-panel-header {
           margin-bottom: 16px;
         }
       }
 
       .mat-expansion-panel-header {
-        padding: 0 10px;
+        padding: 0 10px 0 0;
 
         .mat-expansion-indicator {
           &::after {

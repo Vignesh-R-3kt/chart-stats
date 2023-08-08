@@ -1,17 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-calender',
   templateUrl: './calender.component.html',
   styleUrls: ['./calender.component.scss']
 })
-export class CalenderComponent {
+export class CalenderComponent implements OnInit {
   isPopupOpen: boolean = false;
   todayDate: Date = new Date();
   startDate: Date = new Date();
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private http: ApiService) { }
 
   projectForm = this.fb.group({
     projectName: ["", [Validators.required, Validators.minLength(5)]],
@@ -20,6 +21,12 @@ export class CalenderComponent {
     endDate: ["", Validators.required],
     description: ["", [Validators.required, Validators.minLength(15)]]
   });
+  
+  ngOnInit(): void {
+      this.http.fetchAllData().subscribe((res:any) => {
+        console.log(res);
+      })
+  }
 
   openPopup() {
     this.isPopupOpen = true;

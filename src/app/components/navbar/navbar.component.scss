@@ -272,35 +272,25 @@
   transition: all 0.4s ease;
 }
 
-
 //Project-tab
 
 .dropdown-toggle-items {
-  background:#000033;
+  background: #000033;
 }
 
 .mat-expansion-panel-header {
-  background: #2B2B4B;
   box-shadow: none;
 }
 
 .navlink .active {
   background: #000033;
-} 
+}
 
 .mat-expansion-panel {
   background: #000033;
 
-  &:hover  {
-    background:#000033;
-  }
-}
-
-#mat-expansion-panel-header-0 {
-  background: #2B2B4B;
-
   &:hover {
-    background: #1D1D43;
+    background: #000033;
   }
 }
 
@@ -312,7 +302,14 @@
   padding: 0 !important;
 }
 
-.mat-expansion-panel{
+.mat-expansion-panel {
   box-shadow: none;
-} 
+}
 
+.mat-expansion-panel-header {
+  background: #2b2b4b !important;
+
+  &.mat-expanded {
+    background: #000033 !important;
+  }
+}
