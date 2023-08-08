@@ -271,3 +271,37 @@
   font-size: 16px;
   transition: all 0.4s ease;
 }
+
+
+//Project-tab
+
+.dropdown-toggle-items {
+  background:#000033;
+}
+
+.mat-expansion-panel-header {
+  background: #2B2B4B;
+}
+
+.navlink .active {
+  background: #000033;
+} 
+
+.mat-expansion-panel {
+  background: #000033;
+
+  &:hover  {
+    background:#000033;
+  }
+}
+
+#mat-expansion-panel-header-0 {
+  background: #2B2B4B;
+
+  &:hover {
+    background: #1D1D43;
+  }
+}
+
+
+
