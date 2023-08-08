@@ -231,31 +231,61 @@
   }
 }
 
-
 // Temp Styling
 
 .projects-table {
   overflow: auto;
+  padding: 6px;
+  border-radius: 6px;
+  padding-bottom: 14px;
+  background: #ffffff;
+  margin-top: 28px;
+
+  &::-webkit-scrollbar {
+    height: 6px;
+
+    &-thumb {
+      background: #cccccc;
+      border-radius: 6px;
+    }
+  }
 }
 
 table {
-  margin-top: 28px;
   text-align: center;
-  background: #ffffff;
-  width: 100%; 
+  width: 100%;
 
-  th  {
+  th {
     padding: 8px;
   }
 
   td {
     padding: 8px;
+
+    button {
+      border: none;
+      border-radius: 4px;
+      padding: 4px;
+      font-size: 14px;
+      color: #ffffff;
+      cursor: pointer;
+
+      &.delete-btn {
+        background: #fb2525;
+        margin-right: 8px;
+      }
+
+      &.edit-btn {
+        background: #014dd8;
+      }
+    }
   }
 }
 
-table, td, th {
+table,
+td,
+th {
   // color: #ffffff;
   border: 1px solid #cccccc;
   border-collapse: collapse;
 }
-

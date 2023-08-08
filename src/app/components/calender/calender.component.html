@@ -70,8 +70,8 @@
                     -
                 </td>
                 <td>
-                    <button (click)="deleteDate(data.id)">D</button>
-                    <button>E</button>
+                    <button class="delete-btn" (click)="deleteDate(data.id)">D</button>
+                    <button class="edit-btn">E</button>
                 </td>
             </tr>
             <tr *ngIf="!tableData.length">
