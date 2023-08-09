@@ -25,19 +25,19 @@
             <span class="count-text">16</span>
         </div>
         <ul class="navlinks-wrapper">
-            <li class="navlink" routerLinkActive="active"  routerLink="home" [routerLinkActiveOptions]="{exact: true}">
+            <li class="navlink" routerLinkActive="active"  routerLink="/main-body/home" [routerLinkActiveOptions]="{exact: true}">
                 <div class="icon-wrapper">
                     <img src="../../../assets/images/home.png" alt="home-icon">
                     <a > Home</a>
                 </div>
             </li>
-            <li class="navlink" routerLinkActive="active" routerLink="calender">
+            <li class="navlink" routerLinkActive="active" routerLink="/main-body/calender">
                 <div class="icon-wrapper">
                     <img src="../../../assets/images/calendar.png" alt="calender-icon">
                     <a > Calender</a>
                 </div>
             </li>
-            <li class="navlink" routerLinkActive="active"  routerLink="messages">
+            <li class="navlink" routerLinkActive="active"  routerLink="/main-body/messages">
                 <div class="icon-wrapper">
                     <img src="../../../assets/images/message-icon.png" alt="message-icon">
                     <a > Messages</a>
@@ -49,42 +49,42 @@
                     <mat-expansion-panel class="expand" (opened)="panelOpenState = true"
                         (closed)="panelOpenState = false">
                         <mat-expansion-panel-header id="projectHeader">
-                            <mat-panel-title class="icon-wrapper" routerLink="projects">
+                            <mat-panel-title class="icon-wrapper" routerLink="/main-body/projects">
                                 <img class="arrowIcon" src="../../../assets/images/briefcase.svg" alt="message-icon">
                                 Projects
                             </mat-panel-title>
                         </mat-expansion-panel-header>
                         <ul class="dropdown-toggle-items">
                             <li routerLinkActive="active">
-                                <a  routerLink="projects/google">Google</a>
+                                <a  routerLink="/main-body/projects/google">Google</a>
                             </li>
                             <li routerLinkActive="active">
-                                <a  routerLink="projects/amazon">Amazon</a>
+                                <a  routerLink="/main-body/projects/amazon">Amazon</a>
                             </li>
                             <li routerLinkActive="active">
-                                <a  routerLink="projects/facebook">Facebook</a>
+                                <a  routerLink="/main-body/projects/facebook">Facebook</a>
                             </li>
                             <li routerLinkActive="active">
-                                <a  routerLink="projects/airbnb">Airbnb</a>
+                                <a  routerLink="/main-body/projects/airbnb">Airbnb</a>
                             </li>
                         </ul>
                     </mat-expansion-panel>
                 </mat-accordion>
 
             </li>
-            <li class="navlink" routerLinkActive="active" routerLink="progress">
+            <li class="navlink" routerLinkActive="active" routerLink="/main-body/progress">
                 <div class="icon-wrapper">
                     <img src="../../../assets/images/bar-chart.svg" alt="progress-icon">
                     <a  > Progress</a>
                 </div>
             </li>
-            <li class="navlink" routerLinkActive="active" routerLink="goals">
+            <li class="navlink" routerLinkActive="active" routerLink="/main-body/goals">
                 <div class="icon-wrapper">
                     <img src="../../../assets/images/pie-chart.svg" alt="pie-chart-icon">
                     <a  > Goals</a>
                 </div>
             </li>
-            <li class="navlink" routerLinkActive="active" routerLink="settings">
+            <li class="navlink" routerLinkActive="active" routerLink="/main-body/settings">
                 <div class="icon-wrapper">
                     <img src="../../../assets/images/settings.svg" alt="settings-icon">
                     <a  > Settings</a>
