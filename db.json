@@ -1,3 +1,20 @@
 {
-  "projects": []
+  "projects": [
+    {
+      "projectName": "testscascscascas",
+      "projectOwner": "sacascascacsacsac",
+      "startDate": "8/30/2023",
+      "endDate": "8/31/2023",
+      "description": "ascnsabcsajkcbcascascs",
+      "id": 1
+    },
+    {
+      "projectName": "scascasccasc",
+      "projectOwner": "sacascacasc",
+      "startDate": "8/30/2023",
+      "endDate": "8/31/2023",
+      "description": "ascjbsakcjasbcascasc",
+      "id": 2
+    }
+  ]
 }

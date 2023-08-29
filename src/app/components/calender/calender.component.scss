@@ -238,14 +238,13 @@
   padding: 8px 12px;
   border-radius: 6px;
   padding-bottom: 14px;
-  background: #ffffff;
   margin-top: 28px;
 
   &::-webkit-scrollbar {
     height: 6px;
 
     &-thumb {
-      background: #cccccc;
+      background: #7a7a7a;
       border-radius: 6px;
     }
   }
@@ -287,6 +286,6 @@ table,
 td,
 th {
   // color: #ffffff;
-  border: 1px solid #cccccc;
+  border: 1px solid #ffffff !important;
   border-collapse: collapse;
 }

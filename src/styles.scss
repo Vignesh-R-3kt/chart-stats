@@ -31,7 +31,10 @@ a,
 span,
 button,
 input,
-li {
+li,
+label,
+td,
+th {
   font-family: "Nunito", sans-serif;
   color: #ffffff;
   line-height: 1;
@@ -57,7 +60,6 @@ ul {
       width: 100%;
 
       &.mat-expanded {
-
         .mat-expansion-panel-header {
           margin-bottom: 16px;
         }
@@ -130,4 +132,34 @@ mat-calendar {
     .mat-calendar-body-comparison-identical
   ) {
   background-color: #45c86c2a;
+}
+
+// Data Tables
+.dataTables_wrapper {
+  .dataTables_length,
+  .dataTables_filter {
+    margin-bottom: 12px;
+  }
+
+  select {
+    margin: 0 6px;
+    border-radius: 10px !important;
+    
+    option {
+      background: #000033;
+      color: #ffffff;
+    }
+  }
+
+  .dataTables_filter {
+    input {
+      margin-left: 6px !important;
+      border-radius: 10px !important;
+    }
+  }
+
+  .dataTables_info {
+    color: #ffffff !important;
+    font-family: "Nunito", sans-serif;
+  }
 }

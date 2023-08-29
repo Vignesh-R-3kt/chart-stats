@@ -32,9 +32,9 @@ export class CalenderComponent implements OnInit {
   fetchTableData() {
     this.http.fetchAllData().subscribe((res: any) => {
       this.tableData = res;
-      $('#datatableexample').DataTable().destroy();
+      $('#projectsTable').DataTable().destroy();
       setTimeout(() => {
-        $('#datatableexample').DataTable({
+        $('#projectsTable').DataTable({
           pagingType: 'full_numbers',
           processing: true,
         });
