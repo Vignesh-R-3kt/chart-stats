@@ -11,7 +11,7 @@
 
 <!-- Table Starts -->
 <div class="projects-table">
-    <table>
+    <table class="table table-striped table-bordered table-sm row-border hover" id="datatableexample">
         <thead>
             <tr>
                 <th style="width: 50px;">
@@ -73,9 +73,6 @@
                     <button class="delete-btn" (click)="deleteDate(data.id)">D</button>
                     <button class="edit-btn">E</button>
                 </td>
-            </tr>
-            <tr *ngIf="!tableData.length">
-                <td colspan="9">No Data Available, please add projects</td>
             </tr>
         </tbody>
     </table>

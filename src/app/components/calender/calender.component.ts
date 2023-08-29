@@ -32,6 +32,13 @@ export class CalenderComponent implements OnInit {
   fetchTableData() {
     this.http.fetchAllData().subscribe((res: any) => {
       this.tableData = res;
+      $('#datatableexample').DataTable().destroy();
+      setTimeout(() => {
+        $('#datatableexample').DataTable({
+          pagingType: 'full_numbers',
+          processing: true,
+        });
+      }, 1);
     })
   }
 

@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { BodyViewComponent } from './components/body-view/body-view.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { DataTablesModule } from 'angular-datatables';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    MatExpansionModule
+    MatExpansionModule,
+    DataTablesModule
   ],
   providers: [],
   bootstrap: [AppComponent],
