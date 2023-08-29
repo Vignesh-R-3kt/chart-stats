@@ -162,4 +162,8 @@ mat-calendar {
     color: #ffffff !important;
     font-family: "Nunito", sans-serif;
   }
+
+  .dataTables_processing {
+    display: none !important;
+  }
 }
