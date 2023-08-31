@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as Highcharts from 'highcharts';
-import variablePie from 'highcharts/modules/variable-pie'; 
+import variablePie from 'highcharts/modules/variable-pie';
 
-variablePie(Highcharts); 
+variablePie(Highcharts);
 
 @Component({
   selector: 'app-highcharts',
@@ -11,67 +11,53 @@ variablePie(Highcharts);
 })
 
 export class HighchartsComponent implements OnInit {
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
     Highcharts.chart('container', {
       chart: {
-        type: 'variablepie'
+        type: 'pie',
+        backgroundColor: "#2B2B4B"
       },
       title: {
-        text: 'Countries compared by population density and total area, 2022.',
+        text: '',
         align: 'left'
       },
       tooltip: {
         headerFormat: '',
-        pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {point.name}</b><br/>' +
-          'Area (square km): <b>{point.y}</b><br/>' +
-          'Population density (people per square km): <b>{point.z}</b><br/>'
+        pointFormat: '<span>{point.y}</span>'
       },
       series: [{
-        type: 'variablepie', 
+        type: 'variablepie',
         minPointSize: 10,
-        innerSize: '20%',
+        innerSize: '0%',
+        borderWidth: 0,
         zMin: 0,
-        name: 'countries',
-        borderRadius: 5,
+        borderRadius: 0,
+        dataLabels: {
+          connectorWidth: 0,
+          style: {
+            fontSize: '0',
+          },
+        },
         data: [{
-          name: 'Spain',
-          y: 505992,
-          z: 92
+          y: 555992,
+          z: 130,
         }, {
-          name: 'France',
-          y: 551695,
-          z: 119
+          y:600000,
+          z: 110
         }, {
-          name: 'Poland',
-          y: 312679,
-          z: 121
+          y: 252679,
+          z: 90
         }, {
-          name: 'Czech Republic',
-          y: 78865,
-          z: 136
-        }, {
-          name: 'Italy',
-          y: 301336,
-          z: 200
-        }, {
-          name: 'Switzerland',
-          y: 41284,
-          z: 213
-        }, {
-          name: 'Germany',
-          y: 357114,
-          z: 235
+          y: 158865,
+          z: 120
         }],
         colors: [
-          '#4caefe',
-          '#3dc3e8',
-          '#2dd9db',
-          '#1feeaf',
-          '#0ff3a0',
-          '#00e887',
-          '#23e274'
+          '#FE502D',
+          '#017BE4',
+          '#0EBC56',
+          '#7E2FE0'
         ]
       }]
     });
