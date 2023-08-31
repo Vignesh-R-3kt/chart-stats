@@ -9,12 +9,14 @@ import { BodyViewComponent } from './components/body-view/body-view.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { DataTablesModule } from 'angular-datatables';
+import { HighchartsChartModule } from 'highcharts-angular';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NavbarComponent,
-    BodyViewComponent
+    BodyViewComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,8 @@ import { DataTablesModule } from 'angular-datatables';
     AppRoutingModule,
     HttpClientModule,
     MatExpansionModule,
-    DataTablesModule
+    DataTablesModule,
+    HighchartsChartModule
   ],
   providers: [],
   bootstrap: [AppComponent],

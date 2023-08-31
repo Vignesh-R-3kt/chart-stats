@@ -17,6 +17,7 @@ import { ProfileScreenComponent } from '../profile-screen/profile-screen.compone
 
 
 import { CardComponentComponent } from '../card-component/card-component.component';
+import { HighchartsComponent } from '../highcharts/highcharts.component';
 
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
@@ -40,6 +41,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FacebookComponent,
     AirbnbComponent,
     ProfileScreenComponent,
+    HighchartsComponent
   ],
   imports: [
     CommonModule,
