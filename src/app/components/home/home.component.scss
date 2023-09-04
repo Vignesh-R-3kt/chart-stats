@@ -1,9 +1,11 @@
   .charts-wrapper {
     display: flex;
+    justify-content: space-between;
     gap: 18px;
-    margin-top: 18px;
+    margin-top: 22px;
+    
 
     app-highchart {
-      width: 30%;
+      width: 40%;
     }
   }
