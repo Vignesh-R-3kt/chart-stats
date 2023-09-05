@@ -29,16 +29,19 @@ export class AreachartsComponent implements OnInit, AfterViewInit {
         description: '',
       },
       title: {
-        text: 'title',
+        text: 'Text here',
+        style: {
+          color: '#ffffff' 
+        }
       },
       subtitle: {
         text: 'Source: <a href="https://fas.org/issues/nuclear-weapons/status-world-nuclear-forces/" ' +
-          'target="_blank">FAS</a>'
+          'target="_blank" style="color: #ffffff;">FAS</a>'
       },
       xAxis: {
         allowDecimals: false,
         accessibility: {
-          rangeDescription: 'Range: 1940 to 2017.'
+          rangeDescription: 'Range: 1940 to 2017.',
         }
       },
       yAxis: {
@@ -47,7 +50,15 @@ export class AreachartsComponent implements OnInit, AfterViewInit {
         }
       },
       tooltip: {
-        pointFormat: '{series.name} had stockpiled <b>{point.y:,.0f}</b><br/>warheads in {point.x}'
+        useHTML: true, 
+        pointFormat: '<span style="color: black;">{series.name} had stockpiled <b>{point.y:,.0f}</b><br/>warheads in {point.x}</span>',
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        borderColor: 'black',
+        borderWidth: 0.2,
+        style: {
+          whiteSpace: 'nowrap',
+          color:'black',
+        }
       },
       plotOptions: {
         area: {

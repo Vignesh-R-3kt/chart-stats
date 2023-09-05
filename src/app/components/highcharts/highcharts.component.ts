@@ -9,7 +9,6 @@ variablePie(Highcharts);
   templateUrl: './highcharts.component.html',
   styleUrls: ['./highcharts.component.scss']
 })
-
 export class HighchartsComponent implements OnInit {
   constructor() { }
 
@@ -24,8 +23,16 @@ export class HighchartsComponent implements OnInit {
         align: 'left'
       },
       tooltip: {
+        useHTML: true, 
         headerFormat: '',
-        pointFormat: '<span>{point.y}</span>'
+        pointFormat: '<span style="color: black;">{point.y}</span>', // Set text color to black
+        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+        borderColor: 'black', 
+        borderWidth: 0.2,
+        style: {
+          whiteSpace: 'nowrap',
+          color: 'black'
+        }
       },
       series: [{
         type: 'variablepie',
