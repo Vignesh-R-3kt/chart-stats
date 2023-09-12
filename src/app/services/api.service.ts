@@ -17,8 +17,8 @@ export class ApiService {
     return this.api.get(`http://${this.baseUrl}/projects`);
   }
 
-  fetchAllData1(): Observable<any[]> {
-    return this.api.get<any[]>(`http://${this.baseUrl}/data`);
+  fetchPieChartData(): Observable<any[]> {
+    return this.api.get<any[]>(`http://${this.baseUrl}/pieChartData`);
   }
 
    // Method to add new project details to DB

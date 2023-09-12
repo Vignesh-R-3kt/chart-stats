@@ -16,11 +16,10 @@ export class HighchartsComponent implements OnInit {
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.apiService.fetchAllData1().subscribe((result: any[]) => { 
+    this.apiService.fetchPieChartData().subscribe((result: any[]) => { 
       this.data = result;
-      console.log("result");
 
-      // Create the Highcharts chart here, inside the subscribe callback
+      // Created the Highcharts chart here, inside the subscribe callback
       Highcharts.chart('container', {
         chart: {
           type: 'pie',
