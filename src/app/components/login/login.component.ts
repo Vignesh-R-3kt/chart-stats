@@ -28,6 +28,8 @@ export class LoginComponent implements OnInit {
     if (userName === "admin" && password === "admin") {
       this.route.navigate(["/main-body"]);
       window.sessionStorage.setItem("logged", "yes");
+    } else {
+      alert("Invalid Credentials");
     }
   }
 }
