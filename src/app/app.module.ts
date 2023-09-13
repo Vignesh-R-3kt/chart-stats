@@ -10,6 +10,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { DataTablesModule } from 'angular-datatables';
 import { HighchartsChartModule } from 'highcharts-angular';
+import { LoginComponent } from './components/login/login.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AuthGuard } from './services/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -17,6 +21,8 @@ import { HighchartsChartModule } from 'highcharts-angular';
     HeaderComponent,
     NavbarComponent,
     BodyViewComponent,
+    LoginComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,9 +31,10 @@ import { HighchartsChartModule } from 'highcharts-angular';
     HttpClientModule,
     MatExpansionModule,
     DataTablesModule,
-    HighchartsChartModule
+    HighchartsChartModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

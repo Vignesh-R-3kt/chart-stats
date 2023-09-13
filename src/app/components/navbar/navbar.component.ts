@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -10,6 +11,8 @@ export class NavbarComponent {
   dropdownOpen: boolean = false;
   selectedDropdownItem: string = 'Profile-details';
 
+  constructor(private router:Router){}
+
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
   }
@@ -17,7 +20,10 @@ export class NavbarComponent {
   selectDropdownItem(item: string): void {
     this.selectedDropdownItem = item;
     this.dropdownOpen = false;
-    console.log('Selected dropdown item:', this.selectedDropdownItem);
+    if (this.selectedDropdownItem === "Logout") {
+      window.sessionStorage.removeItem("logged");
+      this.router.navigate(["login"]);
+    }
   }
 
   isItemSelected(item: string): boolean {
