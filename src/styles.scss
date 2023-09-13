@@ -192,7 +192,11 @@ mat-calendar {
     #projectsTable_next,
     #projectsTable_last,
     #projectsTable_first,
-    #projectsTable_previous {
+    #projectsTable_previous
+    #goalsTable_next,
+    #goalsTable_last,
+    #goalsTable_first,
+    #goalsTable_previous  {
       color: #cccccc !important;
 
       &:hover {

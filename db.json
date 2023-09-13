@@ -1,92 +1,21 @@
 {
-  "projects": [
+  "projects": [],
+  "goals": [
     {
-      "projectName": "testscascscascas",
-      "projectOwner": "sacascascacsacsac",
-      "startDate": "8/30/2023",
-      "endDate": "8/31/2023",
-      "description": "ascnsabcsajkcbcascascs",
+      "goalName": "First Goal",
+      "Estimatedhours": "2",
+      "startDate": "2023-09-18T18:30:00.000Z",
+      "endDate": "2023-09-28T18:30:00.000Z",
+      "description": "First GoalFirst GoalFirst GoalFirst GoalFirst GoalFirst GoalFirst Goal",
       "id": 1
     },
     {
-      "projectName": "scascasccasc",
-      "projectOwner": "sacascacasc",
-      "startDate": "8/30/2023",
-      "endDate": "8/31/2023",
-      "description": "ascjbsakcjasbcascasc",
+      "goalName": "2 nd goal",
+      "Estimatedhours": "3",
+      "startDate": "2023-09-19T18:30:00.000Z",
+      "endDate": "2023-09-22T18:30:00.000Z",
+      "description": "xxxxxxxxxxxxxxxxxxxxxssssssssssssssssssssss",
       "id": 2
-    },
-    {
-      "projectName": "csacscscascsc",
-      "projectOwner": "sacsacscssac",
-      "startDate": "9/14/2023",
-      "endDate": "9/30/2023",
-      "description": "acascsacsacscsaccsa",
-      "id": 3
-    },
-    {
-      "projectName": "asvsavsvsva",
-      "projectOwner": "svavsavsavasvsa",
-      "startDate": "8/31/2023",
-      "endDate": "9/29/2023",
-      "description": "ascacascacscacasc",
-      "id": 4
-    },
-    {
-      "projectName": "sacsacsacascsac",
-      "projectOwner": "sacascascsacs",
-      "startDate": "8/29/2023",
-      "endDate": "8/30/2023",
-      "description": "saccaascsacascscasc",
-      "id": 5
-    },
-    {
-      "projectName": "saccsac",
-      "projectOwner": "sacsacsac",
-      "startDate": "8/31/2023",
-      "endDate": "9/21/2023",
-      "description": "sacsacsaccsacsacasc",
-      "id": 6
-    },
-    {
-      "projectName": "ascsacascasc",
-      "projectOwner": "ascsacascs",
-      "startDate": "8/31/2023",
-      "endDate": "9/22/2023",
-      "description": "ascsacacascascascasc",
-      "id": 8
-    },
-    {
-      "projectName": "sacasc",
-      "projectOwner": "sacsacascas",
-      "startDate": "8/31/2023",
-      "endDate": "9/28/2023",
-      "description": "acsasascsacacascascascasc",
-      "id": 9
-    },
-    {
-      "projectName": "sacac",
-      "projectOwner": "sacsacsac",
-      "startDate": "9/14/2023",
-      "endDate": "9/29/2023",
-      "description": "ascsacacascascascasc",
-      "id": 10
-    },
-    {
-      "projectName": "ascsacsac",
-      "projectOwner": "sacsaasc",
-      "startDate": "8/31/2023",
-      "endDate": "9/15/2023",
-      "description": "ascsacacascascascasc",
-      "id": 11
-    },
-    {
-      "projectName": "csaccsacsaccc",
-      "projectOwner": "ascsacccsacas",
-      "startDate": "10/11/2023",
-      "endDate": "10/18/2023",
-      "description": "sacsacscoasjciascascas",
-      "id": 12
     }
   ]
 }
