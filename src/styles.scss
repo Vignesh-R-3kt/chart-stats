@@ -208,8 +208,11 @@ mat-calendar {
 
 // Pie Chart
 .charts-wrapper {
+  display: flex;
+
   .pie-chart-container {
     width: 30%;
+    height: 300px;
     border-radius: 6px;
     overflow: hidden;
     background: #2b2b4b;
@@ -228,18 +231,29 @@ mat-calendar {
       }
     }
 
-    app-highcharts {
-      figure {
-        &.highcharts-figure {
-          .highcharts-credits {
-            display: none;
-          }
-
-          #container {
-            height: 300px;
-          }
-        }
+    app-areacharts {
+      #container-1 {
+        border-radius: 6px;
+        color: #ffffff !important;
       }
     }
+  }
+}
+
+text {
+  fill: #ffffff !important;
+}
+
+text.highcharts-credits {
+  display: none;
+}
+
+text.highcharts-subtitle {
+  display: none;
+}
+
+.highcharts-tooltip {
+  span {
+    color: #000000 !important;
   }
 }
