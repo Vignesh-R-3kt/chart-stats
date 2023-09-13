@@ -6,19 +6,27 @@
   bottom: 0;
   background: #000000cd;
   z-index: 99999999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  p {
+    font-size: 8px;
+    font-weight: 300;
+  }
 }
 
 .center {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: scale(0.4);
+  transform: scale(0.6);
 }
 .wave {
   width: 5px;
   height: 100px;
-  background: linear-gradient(45deg, #ff422b, #fff);
+  background: linear-gradient(180deg, #fc402a, #ffffff);
   margin: 10px;
   animation: wave 1s linear infinite;
   border-radius: 20px;
