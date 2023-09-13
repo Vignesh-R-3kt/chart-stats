@@ -16,9 +16,6 @@ export class LoginComponent implements OnInit {
   });
 
   ngOnInit(): void {
-    if (window.sessionStorage.getItem("logged")) {
-      this.route.navigate(["/main-body"]);
-    }
   }
 
   fetchLoginDetails() {
