@@ -31,4 +31,10 @@ export class ApiService {
   deleteData(id: number) {
     return this.api.delete(`http://${this.baseUrl}/projects/${id}`);
   }
+
+
+  // Method to fetch number of projectsData
+  fetchNumberOfProjectsData() {
+    return this.api.get(`http://${this.baseUrl}/projects-count`);
+  }
 }

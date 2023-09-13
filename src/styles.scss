@@ -247,3 +247,9 @@ text.highcharts-credits {
 text.highcharts-subtitle {
   display: none;
 }
+
+.highcharts-tooltip {
+  span {
+    color: $black !important;
+  }
+}

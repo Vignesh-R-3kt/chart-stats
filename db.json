@@ -126,5 +126,63 @@
       "y": 255992,
       "z": 90
     }
+  ],
+  "projects-count": [
+    {
+      "year": 2010,
+      "projects": 20
+    },
+    {
+      "year": 2011,
+      "projects": 25
+    },
+    {
+      "year": 2012,
+      "projects": 30
+    },
+    {
+      "year": 2013,
+      "projects": 35
+    },
+    {
+      "year": 2014,
+      "projects": 40
+    },
+    {
+      "year": 2015,
+      "projects": 45
+    },
+    {
+      "year": 2016,
+      "projects": 5
+    },
+    {
+      "year": 2017,
+      "projects": 105
+    },
+    {
+      "year": 2018,
+      "projects": 60
+    },
+    {
+      "year": 2019,
+      "projects": 65
+    },
+    {
+      "year": 2020,
+      "projects": 70
+    },
+    {
+      "year": 2021,
+      "projects": 75
+    },
+    {
+      "year": 2022,
+      "projects": 80
+    },
+    {
+      "year": 2023,
+      "projects": 90
+    }
   ]
 }
