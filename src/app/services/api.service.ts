@@ -37,4 +37,16 @@ export class ApiService {
   fetchNumberOfProjectsData() {
     return this.api.get(`http://${this.baseUrl}/projects-count`);
   }
+  fetchAllGoals() {
+    return this.api.get(`http://${this.baseUrl}/goals`);
+  }
+ 
+  sendGoalToDB(goal: any) {
+    let options = { headers: new HttpHeaders().set('Content-Type', 'application/json') };
+    return this.api.post(`http://${this.baseUrl}/goals`, JSON.stringify(goal), options);
+  }
+ 
+  deleteGoal(id: number) {
+    return this.api.delete(`http://${this.baseUrl}/goals/${id}`);
+  }
 }
