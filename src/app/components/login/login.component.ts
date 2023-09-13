@@ -29,11 +29,13 @@ export class LoginComponent implements OnInit {
       if (userName === "admin" && password === "admin") {
         this.route.navigate(["/main-body"]);
         window.sessionStorage.setItem("logged", "yes");
+        this.loader.close();
       } else {
-        alert("Invalid Credentials");
+        this.loader.close();
+        setTimeout(() => {
+          alert("Invalid Login Credentials");
+        }, 100)
       };
-
-      this.loader.close();
     }, 1500);
   }
 }
