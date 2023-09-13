@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoaderService } from 'src/app/services/loader.service';
+import { PopupService } from 'src/app/services/popup.service';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,7 @@ import { LoaderService } from 'src/app/services/loader.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  constructor(private fb: FormBuilder, private route: Router, private loader: LoaderService) { }
+  constructor(private fb: FormBuilder, private route: Router, private loader: LoaderService, private popup: PopupService) { }
 
   loginForm: FormGroup = this.fb.group({
     userName: ["", [Validators.required, Validators.minLength(5)]],
@@ -33,7 +34,7 @@ export class LoginComponent implements OnInit {
       } else {
         this.loader.close();
         setTimeout(() => {
-          alert("Invalid Login Credentials");
+          this.popup.openPopup("Invalid Login Credentials");
         }, 100)
       };
     }, 1500);
