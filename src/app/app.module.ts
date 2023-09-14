@@ -15,7 +15,6 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthGuard } from './services/auth-guard.service';
 import { AuthLoginGuard } from './services/auth-login.service';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +22,7 @@ import { AuthLoginGuard } from './services/auth-login.service';
     NavbarComponent,
     BodyViewComponent,
     LoginComponent,
-    DashboardComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

@@ -4,14 +4,16 @@ import { HomeComponent } from '../home/home.component';
 import { CalenderComponent } from '../calender/calender.component';
 import { MessagesComponent } from '../messages/messages.component';
 import { ProjectsComponent } from '../projects/projects.component';
-import { GoogleComponent } from '../projects/google/google.component';
-import { AmazonComponent } from '../projects/amazon/amazon.component';
-import { FacebookComponent } from '../projects/facebook/facebook.component';
-import { AirbnbComponent } from '../projects/airbnb/airbnb.component';
 import { ProgressComponent } from '../progress/progress.component';
 import { GoalsComponent } from '../goals/goals.component';
 import { SettingsComponent } from '../settings/settings.component';
 import { ProfileScreenComponent } from '../profile-screen/profile-screen.component';
+import { ProjectDetailsComponent } from '../project-details/project-details.component';
+import { SummaryComponent } from '../project-details/summary/summary.component';
+import { TeamComponent } from '../project-details/team/team.component';
+import { EstimatesComponent } from '../project-details/estimates/estimates.component';
+import { TrackingComponent } from '../project-details/tracking/tracking.component';
+import { ExpenseComponent } from '../project-details/expense/expense.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
@@ -19,12 +21,17 @@ const routes: Routes = [
   { path: "calender", component: CalenderComponent },
   { path: "messages", component: MessagesComponent },
   {
-    path: "projects", component: ProjectsComponent, children: [
-      { path: "", redirectTo: "google", pathMatch: "full" },
-      { path: "google", component: GoogleComponent },
-      { path: "amazon", component: AmazonComponent },
-      { path: "facebook", component: FacebookComponent },
-      { path: "airbnb", component: AirbnbComponent },
+    path: "projects", children: [
+      {
+        path: ":id", component: ProjectDetailsComponent, children: [
+          { path: "", redirectTo: "summary", pathMatch: "full" },
+          { path: "summary", component: SummaryComponent },
+          { path: "team", component: TeamComponent },
+          { path: "estimates", component: EstimatesComponent },
+          { path: "tracking", component: TrackingComponent },
+          { path: "expense", component: ExpenseComponent },
+        ]
+      }
     ]
   },
   { path: "progress", component: ProgressComponent },

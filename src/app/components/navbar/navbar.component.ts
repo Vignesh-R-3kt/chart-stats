@@ -11,6 +11,7 @@ export class NavbarComponent {
   panelOpenState: boolean = false;
   dropdownOpen: boolean = false;
   selectedDropdownItem: string = 'Profile-details';
+  projects: any = ["google", "amazon", "facebook", "airbnb"];
 
   constructor(private router: Router, private loader: LoaderService) { }
 

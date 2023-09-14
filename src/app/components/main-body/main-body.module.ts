@@ -9,10 +9,6 @@ import { ProjectsComponent } from '../projects/projects.component';
 import { ProgressComponent } from '../progress/progress.component';
 import { GoalsComponent } from '../goals/goals.component';
 import { SettingsComponent } from '../settings/settings.component';
-import { GoogleComponent } from '../projects/google/google.component';
-import { AmazonComponent } from '../projects/amazon/amazon.component';
-import { FacebookComponent } from '../projects/facebook/facebook.component';
-import { AirbnbComponent } from '../projects/airbnb/airbnb.component';
 import { ProfileScreenComponent } from '../profile-screen/profile-screen.component';
 
 
@@ -25,6 +21,12 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProjectDetailsComponent } from '../project-details/project-details.component';
+import { ExpenseComponent } from '../project-details/expense/expense.component';
+import { TrackingComponent } from '../project-details/tracking/tracking.component';
+import { EstimatesComponent } from '../project-details/estimates/estimates.component';
+import { TeamComponent } from '../project-details/team/team.component';
+import { SummaryComponent } from '../project-details/summary/summary.component';
 
 
 @NgModule({
@@ -37,13 +39,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProgressComponent,
     GoalsComponent,
     SettingsComponent,
-    GoogleComponent,
-    AmazonComponent,
-    FacebookComponent,
-    AirbnbComponent,
     ProfileScreenComponent,
     HighchartsComponent,
-    AreachartsComponent
+    AreachartsComponent,
+    ProjectDetailsComponent,
+    SummaryComponent,
+    TeamComponent,
+    EstimatesComponent,
+    TrackingComponent,
+    ExpenseComponent,
   ],
   imports: [
     CommonModule,
