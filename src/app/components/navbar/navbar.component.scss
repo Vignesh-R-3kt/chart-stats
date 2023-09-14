@@ -10,12 +10,24 @@
     padding: 30px 18px 30px 15px;
 
     .imgWrapper {
-      width: 55px;
-      height: 55px;
+      min-width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid #ffffff;
+      box-sizing: content-box;
+
+      img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        object-position: center center;
+      }
     }
 
     .name {
       margin: 0 10px 0 24px;
+      flex-grow: 1;
 
       h4 {
         color: #fff;
