@@ -230,48 +230,71 @@
     transform: translateY(0);
   }
 }
-.card-container {
-display: flex;
 
-}
-.card {
-  float: left;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-  width: 200px;
-  height: 170px;
-  margin-right: 10px;
-}
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  background: #2b2b4b;
+  padding: 24px;
+  border-radius: 6px;
 
-.card h3 {
-  font-size: 18px;
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-.card h4 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.card p {
-  margin: 5px 0;
-  margin-bottom: 10px;
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 12px 12px 24px;
+    width: calc(33.3333333% - 16px);
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      font-weight: 600;
+      word-break: break-all;
+      text-align: center;
+      text-transform: capitalize;
+      border-bottom: 1px solid #cccccc;
+      padding-bottom: 6px;
+      letter-spacing: 1px;
+    }
+
+    h4 {
+      font-size: 12px;
+      word-break: break-all;
+      margin: 0;
+      margin-top: 12px;
+      line-height: 20px;
+      text-transform: capitalize;
+      font-weight: 300;
+
+      span {
+        font-weight: 900;
+        margin-right: 4px;
+      }
+    }
+
+    p {
+      margin: 5px 0;
+      margin-bottom: 10px;
+      font-size: 14px;
+      text-align: center;
+    }
+  }
 }
 
 .linear-gradient-orange {
-  background: linear-gradient(90deg, #f39034 2.03%, #ff2727 99.73%);
+  background: linear-gradient(90deg, #df7e24 2.03%, #e31c1c 99.73%);
 }
 
 .linear-gradient-blue {
-  background: linear-gradient(270deg, #003ad2 0%, #0097ec 100%);
+  background: linear-gradient(270deg, #0234b2 0%, #0174b8 100%);
 }
 
 .linear-gradient-green {
-  background: linear-gradient(270deg, #00a843 0.19%, #1fd071 99.8%);
+  background: linear-gradient(270deg, #018c38 0.19%, #0fba5f 99.8%);
 }
 
 .linear-gradient-purple {
-  background: linear-gradient(270deg, #5900c9 0.02%, #9852f0 99.98%);
+  background: linear-gradient(270deg, #4d01aa 0.02%, #8038d7 99.98%);
 }

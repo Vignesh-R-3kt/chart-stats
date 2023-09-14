@@ -22,26 +22,20 @@
             <div class="goalName">
               <label for="" name="goalName">Goal Name</label>
               <input type="text" formControlName="goalName" />
-              <p
-                class="error-text"
-                *ngIf="
+              <p class="error-text" *ngIf="
                   !goalsForm.get('goalName')?.valid &&
                   goalsForm.get('goalName')?.touched
-                "
-              >
+                ">
                 Invalid Input
               </p>
             </div>
             <div class="Estimatedhours">
               <label for="" name="Estimatedhours">Estimated Hours</label>
-              <input type="text" formControlName="Estimatedhours" />
-              <p
-                class="error-text"
-                *ngIf="
+              <input type="number" formControlName="Estimatedhours" />
+              <p class="error-text" *ngIf="
                   !goalsForm.get('Estimatedhours')?.valid &&
                   goalsForm.get('Estimatedhours')?.touched
-                "
-              >
+                ">
                 Please Enter Numbers
               </p>
             </div>
@@ -50,59 +44,28 @@
             <div class="startDate">
               <mat-form-field>
                 <mat-label>Start Date</mat-label>
-                <input
-                  matInput
-                  [matDatepicker]="dp1"
-                  name="start-date"
-                  [min]="todayDate"
-                  formControlName="startDate"
-                  (dateChange)="updateEndDate($event)"
-                />
-                <mat-datepicker-toggle
-                  matSuffix
-                  [for]="dp1"
-                ></mat-datepicker-toggle>
+                <input matInput [matDatepicker]="dp1" name="start-date" [min]="todayDate" formControlName="startDate"
+                  (dateChange)="updateEndDate($event)" />
+                <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
                 <mat-datepicker #dp1></mat-datepicker>
               </mat-form-field>
             </div>
-            <div
-              class="endDate"
-              [ngClass]="{ disabled: !goalsForm.get('startDate')?.valid }"
-            >
+            <div class="endDate" [ngClass]="{ disabled: !goalsForm.get('startDate')?.valid }">
               <mat-form-field>
                 <mat-label>End Date</mat-label>
-                <input
-                  matInput
-                  [matDatepicker]="dp2"
-                  formControlName="endDate"
-                  name="end-date"
-                  [min]="startDate"
-                />
-                <mat-datepicker-toggle
-                  matSuffix
-                  [for]="dp2"
-                ></mat-datepicker-toggle>
+                <input matInput [matDatepicker]="dp2" formControlName="endDate" name="end-date" [min]="startDate" />
+                <mat-datepicker-toggle matSuffix [for]="dp2"></mat-datepicker-toggle>
                 <mat-datepicker #dp2></mat-datepicker>
               </mat-form-field>
             </div>
           </div>
           <div class="description-wrapper">
             <label for="">Description (Min 15 Char*)</label>
-            <textarea
-              name=""
-              id=""
-              cols="20"
-              rows="5"
-              name="description"
-              formControlName="description"
-            ></textarea>
-            <p
-              class="error-text"
-              *ngIf="
+            <textarea name="" id="" cols="20" rows="5" name="description" formControlName="description"></textarea>
+            <p class="error-text" *ngIf="
                 !goalsForm.get('description')?.valid &&
                 goalsForm.get('description')?.touched
-              "
-            >
+              ">
               Invalid Input
             </p>
           </div>
@@ -121,13 +84,11 @@
   </div>
 </div>
 
-<div
-  class="card"
-  *ngFor="let goal of goals; let i = index"
-  [ngClass]="getGradientClass(i)"
->
-  <h4>Goal Name: {{ goal.goalName }}</h4>
-  <p>Estimated Hours: {{ goal.Estimatedhours }}</p>
-  <p>End Date: {{ goal.endDate | date : "dd/MM/yy" }}</p>
-  <h4>Description: {{ goal.description }}</h4>
+<div class="cards-wrapper">
+  <div class="card" *ngFor="let goal of goals; let i = index" [ngClass]="getGradientClass(i)">
+    <h3>{{ goal.goalName }}</h3>
+    <p>Estimated Hours : {{ goal.Estimatedhours }}</p>
+    <p>End Date : {{ goal.endDate | date : "dd/MM/yy" }}</p>
+    <h4><span>Description : </span>{{ goal.description }}</h4>
+  </div>
 </div>

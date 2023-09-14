@@ -107,44 +107,84 @@
   ],
   "goals": [
     {
-      "goalName": "First Goal",
+      "goalName": "first Goal",
       "Estimatedhours": "2",
       "startDate": "2023-09-18T18:30:00.000Z",
       "endDate": "2023-09-28T18:30:00.000Z",
-      "description": "First GoalFirst GoalFirst GoalFirst GoalFirst GoalFirst GoalFirst Goal",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptatibus alias sint dolor veritatis beatae!",
       "id": 1
     },
     {
-      "goalName": "First Goal",
+      "goalName": "second Goal",
       "Estimatedhours": "2",
       "startDate": "2023-09-18T18:30:00.000Z",
       "endDate": "2023-09-28T18:30:00.000Z",
-      "description": "First GoalFirst GoalFirst GoalFirst GoalFirst GoalFirst GoalFirst Goal",
-      "id": 1
-    },
-    {
-      "goalName": "First Goal",
-      "Estimatedhours": "2",
-      "startDate": "2023-09-18T18:30:00.000Z",
-      "endDate": "2023-09-28T18:30:00.000Z",
-      "description": "First GoalFirst GoalFirst GoalFirst GoalFirst GoalFirst GoalFirst Goal",
-      "id": 1
-    },
-    {
-      "goalName": "aaaasssssssssssssss",
-      "Estimatedhours": "2",
-      "startDate": "2023-09-19T18:30:00.000Z",
-      "endDate": "2023-09-28T18:30:00.000Z",
-      "description": "sssssssssssssssss",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptatibus alias sint dolor veritatis beatae!",
       "id": 2
     },
     {
-      "goalName": "ssssssssss",
+      "goalName": "third Goal",
+      "Estimatedhours": "2",
+      "startDate": "2023-09-18T18:30:00.000Z",
+      "endDate": "2023-09-28T18:30:00.000Z",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptatibus alias sint dolor veritatis beatae!",
+      "id": 3
+    },
+    {
+      "goalName": "fourth Goal",
+      "Estimatedhours": "2",
+      "startDate": "2023-09-19T18:30:00.000Z",
+      "endDate": "2023-09-28T18:30:00.000Z",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptatibus alias sint dolor veritatis beatae!",
+      "id": 4
+    },
+    {
+      "goalName": "fifth Goal",
       "Estimatedhours": "3",
       "startDate": "2023-09-20T18:30:00.000Z",
       "endDate": "2023-09-22T18:30:00.000Z",
-      "description": "sssssssssssssssssssssssssssssssssss",
-      "id": 3
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptatibus alias sint dolor veritatis beatae!",
+      "id": 5
+    },
+    {
+      "goalName": "sixth Goal",
+      "Estimatedhours": "3",
+      "startDate": "2023-09-20T18:30:00.000Z",
+      "endDate": "2023-09-22T18:30:00.000Z",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptatibus alias sint dolor veritatis beatae!",
+      "id": 6
+    },
+    {
+      "goalName": "seventh Goal",
+      "Estimatedhours": "3",
+      "startDate": "2023-09-20T18:30:00.000Z",
+      "endDate": "2023-09-22T18:30:00.000Z",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptatibus alias sint dolor veritatis beatae!",
+      "id": 7
+    },
+    {
+      "goalName": "eighth Goal",
+      "Estimatedhours": "3",
+      "startDate": "2023-09-20T18:30:00.000Z",
+      "endDate": "2023-09-22T18:30:00.000Z",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptatibus alias sint dolor veritatis beatae!",
+      "id": 8
+    },
+    {
+      "goalName": "nineth Goal",
+      "Estimatedhours": "3",
+      "startDate": "2023-09-20T18:30:00.000Z",
+      "endDate": "2023-09-22T18:30:00.000Z",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptatibus alias sint dolor veritatis beatae!",
+      "id": 9
+    },
+    {
+      "goalName": "tenth goal",
+      "Estimatedhours": "6",
+      "startDate": "2023-09-20T18:30:00.000Z",
+      "endDate": "2023-09-27T18:30:00.000Z",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque voluptatibus alias sint dolor veritatis beatae!",
+      "id": 10
     }
   ],
   "pieChartData": [
