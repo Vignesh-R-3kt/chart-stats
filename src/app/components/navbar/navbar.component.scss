@@ -34,6 +34,7 @@
         font-size: 18px;
         font-weight: 500;
         margin: 0;
+        text-transform: capitalize;
       }
 
       .online {
@@ -272,7 +273,7 @@
       background: #2b2b4b;
     }
 
-    &.selected {
+    &.active{
       background: #cccccc;
       color: #000033;
     }

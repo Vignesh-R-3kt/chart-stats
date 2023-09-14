@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { LoaderService } from 'src/app/services/loader.service';
 
 @Component({
@@ -7,16 +7,26 @@ import { LoaderService } from 'src/app/services/loader.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
   panelOpenState: boolean = false;
   dropdownOpen: boolean = false;
   selectedDropdownItem: string = 'Profile-details';
   projects: any = ["google", "amazon", "facebook", "airbnb"];
+  user: any;
 
-  constructor(private router: Router, private loader: LoaderService) { }
+  constructor(private router: Router, private loader: LoaderService, private route: ActivatedRoute) { }
+
+  ngOnInit(): void {
+    const userDetails: any = window.sessionStorage.getItem("user");
+    this.user = JSON.parse(userDetails);
+  }
 
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
+  }
+
+  closeDropdown() {
+    this.dropdownOpen = false;
   }
 
   selectDropdownItem(item: string): void {
@@ -27,6 +37,7 @@ export class NavbarComponent {
 
       setTimeout(() => {
         window.sessionStorage.removeItem("logged");
+        window.sessionStorage.removeItem("user");
         this.router.navigate(["login"]);
         this.loader.close();
       }, 1000);

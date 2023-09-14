@@ -1,20 +1,17 @@
 <div class="navbar">
     <div class="profile">
         <div class="imgWrapper">
-            <img class="profileImg" src="../../../assets/images/user-icon.png" alt="profile-img">
+            <img class="profileImg" [src]="user.img" alt="profile-img">
         </div>
         <div class="name">
-            <h4>User Name</h4>
+            <h4>{{user.username}}</h4>
             <span class="online">online</span>
         </div>
         <div class="dropdown-wrapper">
             <ul class="dropdown-content" [class.active]="dropdownOpen">
-                <li (click)="selectDropdownItem('Edit Profile')" [class.selected]="isItemSelected('Edit Profile')"
-                    routerLink="profile">
-                    Profile
+                <li (click)="selectDropdownItem('Edit Profile')" routerLink="profile" routerLinkActive="active">Profile
                     details</li>
-                <li (click)="selectDropdownItem('Logout')" [class.selected]="isItemSelected('Logout')"
-                    routerLink="profile">Logout</li>
+                <li (click)="selectDropdownItem('Logout')" [class.selected]="isItemSelected('Logout')">Logout</li>
             </ul>
             <div class="arrowWrapper" [class.active]="dropdownOpen" (click)="toggleDropdown()">
                 <img class="arrowDown" src="../../../assets/images/icons8-hamburger-menu-50.png" alt="arrowdown">
@@ -28,19 +25,20 @@
         </div>
         <ul class="navlinks-wrapper">
             <li class="navlink" routerLinkActive="active" routerLink="/main-body/home"
-                [routerLinkActiveOptions]="{exact: true}">
+                [routerLinkActiveOptions]="{exact: true}" (click)="closeDropdown()">
                 <div class="icon-wrapper">
                     <img src="../../../assets/images/home.png" alt="home-icon">
                     <a> Home</a>
                 </div>
             </li>
-            <li class="navlink" routerLinkActive="active" routerLink="/main-body/calender">
+            <li class="navlink" routerLinkActive="active" routerLink="/main-body/calender" (click)="closeDropdown()">
                 <div class="icon-wrapper">
                     <img src="../../../assets/images/calendar.png" alt="calender-icon">
                     <a> Calender</a>
                 </div>
             </li>
-            <li class="navlink" [ngClass]="{'active' : panelOpenState}">
+            <li class="navlink" [ngClass]="{'active' : panelOpenState}"
+                (click)="closeDropdown()">
                 <mat-accordion class="toggle-btn">
                     <mat-expansion-panel class="expand" (opened)="panelOpenState = true"
                         (closed)="panelOpenState = false">
@@ -51,7 +49,7 @@
                             </mat-panel-title>
                         </mat-expansion-panel-header>
                         <ul class="dropdown-toggle-items">
-                            <li routerLinkActive="active" *ngFor="let project of projects">
+                            <li routerLinkActive="active" *ngFor="let project of projects" (click)="closeDropdown()">
                                 <a routerLink="/main-body/projects/{{project}}">{{project}}</a>
                             </li>
                         </ul>
@@ -59,19 +57,19 @@
                 </mat-accordion>
 
             </li>
-            <li class="navlink" routerLinkActive="active" routerLink="/main-body/progress">
+            <li class="navlink" routerLinkActive="active" routerLink="/main-body/progress" (click)="closeDropdown()">
                 <div class="icon-wrapper">
                     <img src="../../../assets/images/bar-chart.svg" alt="progress-icon">
                     <a> Progress</a>
                 </div>
             </li>
-            <li class="navlink" routerLinkActive="active" routerLink="/main-body/goals">
+            <li class="navlink" routerLinkActive="active" routerLink="/main-body/goals" (click)="closeDropdown()">
                 <div class="icon-wrapper">
                     <img src="../../../assets/images/pie-chart.svg" alt="pie-chart-icon">
                     <a> Goals</a>
                 </div>
             </li>
-            <li class="navlink" routerLinkActive="active" routerLink="/main-body/settings">
+            <li class="navlink" routerLinkActive="active" routerLink="/main-body/settings" (click)="closeDropdown()">
                 <div class="icon-wrapper">
                     <img src="../../../assets/images/settings.svg" alt="settings-icon">
                     <a> Settings</a>

@@ -17,26 +17,60 @@ export class LoginComponent implements OnInit {
     password: ["", [Validators.required, Validators.minLength(5)]]
   });
 
+  users: {}[] = [
+    {
+      username: "vignesh",
+      password: "12345",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyTGZPBgb1rrNuzDZbUT5jFmP18ICdqLaf2g&usqp=CAU"
+    },
+    {
+      username: "vishal",
+      password: "12345",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyTGZPBgb1rrNuzDZbUT5jFmP18ICdqLaf2g&usqp=CAU"
+    },
+    {
+      username: "rajkumar",
+      password: "12345",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyTGZPBgb1rrNuzDZbUT5jFmP18ICdqLaf2g&usqp=CAU"
+    },
+    {
+      username: "surekha",
+      password: "12345",
+      img: "https://cdn.pixabay.com/photo/2014/04/02/17/07/user-307993_640.png"
+    }
+  ]
+
   ngOnInit(): void {
   }
 
   fetchLoginDetails() {
-    const userName = this.loginForm.value.userName;
-    const password = this.loginForm.value.password;
+    const userName = this.loginForm.value.userName.trim();
+    const password = this.loginForm.value.password.trim();
 
     this.loader.show();
 
     setTimeout(() => {
-      if (userName === "admin" && password === "admin") {
+      let userLoggedIn = false;
+      let activeUser;
+
+      this.users.forEach((user: any) => {
+        if (user.username === userName && user.password === password) {
+          userLoggedIn = true;
+          activeUser = user;
+        }
+      })
+
+      if (userLoggedIn && activeUser) {
+        this.loader.close();
         this.route.navigate(["/main-body"]);
         window.sessionStorage.setItem("logged", "yes");
-        this.loader.close();
+        window.sessionStorage.setItem("user", JSON.stringify(activeUser));
       } else {
         this.loader.close();
         setTimeout(() => {
           this.popup.openPopup("Invalid Login Credentials");
-        }, 100)
-      };
-    }, 1500);
+        }, 200)
+      }
+    }, 1200);
   }
 }

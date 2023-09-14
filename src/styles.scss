@@ -105,6 +105,10 @@ ul {
           }
         }
       }
+
+      &.selected {
+        background: #000033;
+      }
     }
   }
 }
