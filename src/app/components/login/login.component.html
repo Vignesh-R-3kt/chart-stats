@@ -6,10 +6,12 @@
             <div class="input-wrapper">
                 <label for="">User Name</label>
                 <input type="text" formControlName="userName">
+                <div class="line"></div>
             </div>
             <div class="input-wrapper">
                 <label for="">Password</label>
                 <input type="password" formControlName="password">
+                <div class="line"></div>
             </div>
             <button [disabled]="!loginForm.valid">Login</button>
         </form>

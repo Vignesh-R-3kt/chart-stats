@@ -71,6 +71,6 @@ export class LoginComponent implements OnInit {
           this.popup.openPopup("Invalid Login Credentials");
         }, 200)
       }
-    }, 1200);
+    }, 1500);
   }
 }
