@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from '../home/home.component';
 import { CalenderComponent } from '../calender/calender.component';
 import { MessagesComponent } from '../messages/messages.component';
-import { ProjectsComponent } from '../projects/projects.component';
 import { ProgressComponent } from '../progress/progress.component';
 import { GoalsComponent } from '../goals/goals.component';
 import { SettingsComponent } from '../settings/settings.component';

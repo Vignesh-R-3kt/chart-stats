@@ -64,6 +64,8 @@ ul {
       width: 100%;
 
       &.mat-expanded {
+        background: #000033 !important;
+
         .mat-expansion-panel-header {
           margin-bottom: 16px;
         }
