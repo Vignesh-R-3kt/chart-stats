@@ -40,7 +40,7 @@
                     <a> Calender</a>
                 </div>
             </li>
-            <li class="navlink">
+            <li class="navlink" [ngClass]="{'active' : panelOpenState}">
                 <mat-accordion class="toggle-btn">
                     <mat-expansion-panel class="expand" (opened)="panelOpenState = true"
                         (closed)="panelOpenState = false">

@@ -89,6 +89,24 @@ ul {
       }
     }
   }
+
+  .navlinks-wrapper {
+    .navlink {
+      &:hover {
+        .mat-expansion-panel-header {
+          background: #1d1d43 !important;
+        }
+      }
+
+      &.active {
+        &:hover {
+          .mat-expansion-panel-header {
+            background: #000033 !important;
+          }
+        }
+      }
+    }
+  }
 }
 
 // Date Picker
