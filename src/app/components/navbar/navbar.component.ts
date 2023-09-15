@@ -11,7 +11,7 @@ export class NavbarComponent implements OnInit {
   panelOpenState: boolean = false;
   dropdownOpen: boolean = false;
   selectedDropdownItem: string = 'Profile-details';
-  projects: any = ["google", "amazon", "facebook", "airbnb"];
+  projects: any = ["EIC", "Persistent", "Roche", "3KT_Administration","Armorcode"];
   user: any;
 
   constructor(private router: Router, private loader: LoaderService, private route: ActivatedRoute) { }

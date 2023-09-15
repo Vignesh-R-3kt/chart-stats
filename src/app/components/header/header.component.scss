@@ -2,10 +2,13 @@
   width: 100%;
   padding: 0 32px;
   background: #2b2b4b;
+  position: fixed;
+  z-index: 999;
 
   .wrapper {
     max-width: 1280px;
     margin: 0 auto;
+    margin-bottom:20px ;
 
     .header-items {
       display: flex;
