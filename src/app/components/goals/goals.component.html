@@ -90,5 +90,7 @@
     <p>Estimated Hours : {{ goal.Estimatedhours }}</p>
     <p>End Date : {{ goal.endDate | date : "dd/MM/yy" }}</p>
     <h4><span>Description : </span>{{ goal.description }}</h4>
+    <a class="see-more-btn active" (click)="expandText($event)">See More</a>
+    <a class="see-less-btn" (click)="collapseText($event)">See Less</a>
   </div>
 </div>

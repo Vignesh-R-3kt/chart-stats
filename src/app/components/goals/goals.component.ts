@@ -36,7 +36,7 @@ export class GoalsComponent implements OnInit {
   startDate: Date = new Date();
   goalFormVisible: boolean = false;
   newGoal: any = {};
-  constructor(private fb: FormBuilder, private http: ApiService) {}
+  constructor(private fb: FormBuilder, private http: ApiService) { }
 
   goalsForm = this.fb.group({
     goalName: ['', [Validators.required, Validators.minLength(5)]],
@@ -48,19 +48,23 @@ export class GoalsComponent implements OnInit {
     endDate: ['', Validators.required],
     description: ['', [Validators.required, Validators.minLength(15)]],
   });
+
   ngOnInit(): void {
     this.fetchAllGoals();
   }
+
   fetchAllGoals() {
     this.http.fetchAllGoals().subscribe((res: any) => {
       this.goals = res;
     });
   }
+
   deleteGoal(id: number) {
     this.http.deleteGoal(id).subscribe((res: any) => {
       this.fetchAllGoals();
     });
   }
+
   openPopup() {
     this.isPopupOpen = true;
     this.goalFormVisible = true;
@@ -70,6 +74,7 @@ export class GoalsComponent implements OnInit {
     this.isPopupOpen = false;
     this.goalFormVisible = false;
   }
+
   submitGoal() {
     this.goalFormVisible = false;
     this.newGoal.color = this.goalColors[this.colorIndex];
@@ -85,10 +90,12 @@ export class GoalsComponent implements OnInit {
       return this.goalColors[(index - 4) % this.goalColors.length];
     }
   }
+
   updateEndDate(e: any) {
     const startDate = new Date(e.target.value);
     this.startDate = startDate;
   }
+  
   fetchFormData(e: any) {
     e.preventDefault();
 
@@ -117,5 +124,17 @@ export class GoalsComponent implements OnInit {
         this.goalFormVisible = false;
       });
     }
+  }
+
+  expandText(e: any) {
+    e.target.classList.remove("active");
+    e.target.closest("div").querySelector("h4").classList.add("active");
+    e.target.closest("div").querySelector(".see-less-btn").classList.add("active");
+  }
+
+  collapseText(e: any) {
+    e.target.classList.remove("active");
+    e.target.closest("div").querySelector("h4").classList.remove("active");
+    e.target.closest("div").querySelector(".see-more-btn").classList.add("active");
   }
 }
