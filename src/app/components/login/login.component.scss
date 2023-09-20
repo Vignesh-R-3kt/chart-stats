@@ -98,7 +98,7 @@
           left: 10px;
           top: 17px;
           border-radius: 6px;
-          transition: all 0.4s ease;
+          transition: all 0.2s ease;
           background: rgb(36, 0, 0);
           background: linear-gradient(
             93deg,
@@ -124,6 +124,7 @@
           &:focus {
             & + div {
               width: 50%;
+              transition: all 0.4s ease;
             }
           }
         }
