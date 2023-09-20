@@ -1,12 +1,26 @@
-h2 {
-  text-align: center;
-  margin: 60px 0 0 0;
+.container {
+  .wrapper {
+    .imgWrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      .profileImg {
+        border-radius: 50%;
+        width: 100px;
+        height: 110px;
+        border: 3px solid #ccc;
+      }
+    }
+    h2 {
+      text-align: center;
+      margin-top: 20px;
 
-  span {
-    font-size: 40px;
-    font-weight: 600;
-    margin-left: 10px;
-    text-transform: capitalize;
-    text-decoration: underline;
+      span {
+        font-size: 32px;
+        font-weight: 600;
+        margin-left: 10px;
+        text-transform: capitalize;
+      }
+    }
   }
 }
