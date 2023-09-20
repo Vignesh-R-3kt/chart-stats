@@ -5,7 +5,8 @@
         </div>
         <div class="name">
             <h4>{{user.username}}</h4>
-            <span class="online">online</span>
+            <span class="online" *ngIf="userActive">online</span>
+            <span class="away" *ngIf="!userActive">away</span>
         </div>
         <div class="dropdown-wrapper">
             <ul class="dropdown-content" [class.active]="dropdownOpen">
@@ -37,8 +38,7 @@
                     <a> Calender</a>
                 </div>
             </li>
-            <li class="navlink" [ngClass]="{'active' : panelOpenState}"
-                (click)="closeDropdown()">
+            <li class="navlink" [ngClass]="{'active' : panelOpenState}" (click)="closeDropdown()">
                 <mat-accordion class="toggle-btn">
                     <mat-expansion-panel class="expand" (opened)="panelOpenState = true"
                         (closed)="panelOpenState = false">
@@ -49,7 +49,8 @@
                             </mat-panel-title>
                         </mat-expansion-panel-header>
                         <ul class="dropdown-toggle-items">
-                            <li routerLinkActive="active" *ngFor="let project of projects" (click)="closeDropdown()" routerLink="/main-body/projects/{{project}}">
+                            <li routerLinkActive="active" *ngFor="let project of projects" (click)="closeDropdown()"
+                                routerLink="/main-body/projects/{{project}}">
                                 <a>{{project}}</a>
                             </li>
                         </ul>

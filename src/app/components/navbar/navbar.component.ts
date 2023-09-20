@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LoaderService } from 'src/app/services/loader.service';
+import { TrackUserService } from 'src/app/services/track-user.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,14 +12,18 @@ export class NavbarComponent implements OnInit {
   panelOpenState: boolean = false;
   dropdownOpen: boolean = false;
   selectedDropdownItem: string = 'Profile-details';
-  projects: any = ["EIC", "Persistent", "Roche", "3KT_Administration","Armorcode"];
+  projects: any = ["EIC", "Persistent", "Roche", "3KT_Administration", "Armorcode"];
   user: any;
+  userActive: boolean = true;
 
-  constructor(private router: Router, private loader: LoaderService, private route: ActivatedRoute) { }
+  constructor(private router: Router, private loader: LoaderService, private route: ActivatedRoute, private userTrack: TrackUserService) { }
 
   ngOnInit(): void {
     const userDetails: any = window.sessionStorage.getItem("user");
     this.user = JSON.parse(userDetails);
+    this.userTrack.isUserActive.subscribe((res: any) => {
+      this.userActive = res;
+    })
   }
 
   toggleDropdown() {
