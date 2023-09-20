@@ -210,7 +210,7 @@ mat-calendar {
       }
 
       &.current {
-        background: #048bad !important;
+        background: #017be4 !important;
         color: #cccccc;
         border: 1px solid #cccccc !important;
       }
@@ -427,6 +427,54 @@ input[type="number"] {
             line-height: 20px;
             color: #dfe2e9;
             font-weight: 400;
+          }
+
+          .action-wrapper {
+            position: relative;
+
+            .dropdown-options {
+              position: absolute;
+              background: #000033;
+              border-radius: 6px;
+              padding: 8px;
+              width: 125px;
+              right: 50%;
+              top: 20%;
+              z-index: 99;
+
+              ul {
+                display: flex;
+                flex-direction: column;
+
+                li {
+                  text-align: start;
+                  padding: 4px 8px;
+                  border-radius: 3px;
+                  cursor: pointer;
+
+                  &:hover {
+                    background: #5e5ce6;
+
+                    a {
+                      color: #000000;
+                    }
+                  }
+                }
+              }
+
+              button {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background: #ffffff !important;
+                color: #45455b;
+                top: -8px;
+                right: -8px;
+                border-radius: 50%;
+                font-size: 8px;
+                font-weight: 900;
+              }
+            }
           }
         }
       }

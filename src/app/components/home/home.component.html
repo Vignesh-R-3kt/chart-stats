@@ -33,173 +33,50 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
+            <tr *ngFor="let item of projects; let i = index">
                 <td>
                     <div class="company-wrapper">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn3tMPf1GfjK6hilt2NDTvqQgFJcqL4-Ez4A&usqp=CAU"
-                            alt="company-img">
-                        <span>Louis Vuitton</span>
+                        <img [src]="item.company_img" alt="company-img">
+                        <span>{{ item.company }}</span>
                     </div>
                 </td>
                 <td>
-                    <span class="status-chip active">
-                        Active
+                    <span class="status-chip"
+                        [ngClass]="{'active' : item.status === 'active','pending' : item.status === 'pending','danger' : item.status === 'danger'}">
+                        {{ item.status }}
                     </span>
                 </td>
                 <td>
-                    Bravo
+                    {{ item.type }}
                 </td>
                 <td>
-                    <span class="id-chip">9177</span>
+                    <span class="id-chip">{{ item.id }}</span>
                 </td>
                 <td>
                     <div class="contact-wrapper">
-                        <img src="https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg"
-                            alt="profile-img">
-                        <span>Evan Flores</span>
+                        <img [src]="item.contact_img" alt="profile-img">
+                        <span>{{ item.contact }}</span>
                     </div>
                 </td>
                 <td>
                     <div class="action-wrapper">
-                        <button>
+                        <button (click)="openPopup(i)">
                             <img src="../../../assets/images/icons8-more.png" alt="icon">
                         </button>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="company-wrapper">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn3tMPf1GfjK6hilt2NDTvqQgFJcqL4-Ez4A&usqp=CAU"
-                            alt="company-img">
-                        <span>Louis Vuitton</span>
-                    </div>
-                </td>
-                <td>
-                    <span class="status-chip active">
-                        Active
-                    </span>
-                </td>
-                <td>
-                    Bravo
-                </td>
-                <td>
-                    <span class="id-chip">9177</span>
-                </td>
-                <td>
-                    <div class="contact-wrapper">
-                        <img src="https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg"
-                            alt="profile-img">
-                        <span>Evan Flores</span>
-                    </div>
-                </td>
-                <td>
-                    <div class="action-wrapper">
-                        <button>
-                            <img src="../../../assets/images/icons8-more.png" alt="icon">
-                        </button>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="company-wrapper">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn3tMPf1GfjK6hilt2NDTvqQgFJcqL4-Ez4A&usqp=CAU"
-                            alt="company-img">
-                        <span>Louis Vuitton</span>
-                    </div>
-                </td>
-                <td>
-                    <span class="status-chip danger">
-                        Danger
-                    </span>
-                </td>
-                <td>
-                    Bravo
-                </td>
-                <td>
-                    <span class="id-chip">9177</span>
-                </td>
-                <td>
-                    <div class="contact-wrapper">
-                        <img src="https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg"
-                            alt="profile-img">
-                        <span>Evan Flores</span>
-                    </div>
-                </td>
-                <td>
-                    <div class="action-wrapper">
-                        <button>
-                            <img src="../../../assets/images/icons8-more.png" alt="icon">
-                        </button>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="company-wrapper">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn3tMPf1GfjK6hilt2NDTvqQgFJcqL4-Ez4A&usqp=CAU"
-                            alt="company-img">
-                        <span>Louis Vuitton</span>
-                    </div>
-                </td>
-                <td>
-                    <span class="status-chip pending">
-                        Pending
-                    </span>
-                </td>
-                <td>
-                    Bravo
-                </td>
-                <td>
-                    <span class="id-chip">9177</span>
-                </td>
-                <td>
-                    <div class="contact-wrapper">
-                        <img src="https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg"
-                            alt="profile-img">
-                        <span>Evan Flores</span>
-                    </div>
-                </td>
-                <td>
-                    <div class="action-wrapper">
-                        <button>
-                            <img src="../../../assets/images/icons8-more.png" alt="icon">
-                        </button>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="company-wrapper">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn3tMPf1GfjK6hilt2NDTvqQgFJcqL4-Ez4A&usqp=CAU"
-                            alt="company-img">
-                        <span>Louis Vuitton</span>
-                    </div>
-                </td>
-                <td>
-                    <span class="status-chip active">
-                        Active
-                    </span>
-                </td>
-                <td>
-                    Bravo
-                </td>
-                <td>
-                    <span class="id-chip">9177</span>
-                </td>
-                <td>
-                    <div class="contact-wrapper">
-                        <img src="https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg"
-                            alt="profile-img">
-                        <span>Evan Flores</span>
-                    </div>
-                </td>
-                <td>
-                    <div class="action-wrapper">
-                        <button>
-                            <img src="../../../assets/images/icons8-more.png" alt="icon">
-                        </button>
+                        <div class="dropdown-options" *ngIf="table_action_popup && table_action_index === i">
+                            <button (click)="closePopup()">X</button>
+                            <ul>
+                                <li>
+                                    <a>View</a>
+                                </li>
+                                <li>
+                                    <a>Edit</a>
+                                </li>
+                                <li>
+                                    <a>Delete</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </td>
             </tr>
