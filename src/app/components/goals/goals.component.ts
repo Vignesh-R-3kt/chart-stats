@@ -20,6 +20,8 @@ function numberValidator(
 export class GoalsComponent implements OnInit {
   goals: any[] = [];
   goalColors: any[] = [];
+  expandedCards: any[] = [];
+
   getGradientClass(index: number): string {
     const gradientClasses = [
       'linear-gradient-orange',
@@ -95,7 +97,7 @@ export class GoalsComponent implements OnInit {
     const startDate = new Date(e.target.value);
     this.startDate = startDate;
   }
-  
+
   fetchFormData(e: any) {
     e.preventDefault();
 
@@ -126,15 +128,11 @@ export class GoalsComponent implements OnInit {
     }
   }
 
-  expandText(e: any) {
-    e.target.classList.remove("active");
-    e.target.closest("div").querySelector("h4").classList.add("active");
-    e.target.closest("div").querySelector(".see-less-btn").classList.add("active");
+  expandText(id: any) {
+    this.expandedCards.push(id);
   }
 
-  collapseText(e: any) {
-    e.target.classList.remove("active");
-    e.target.closest("div").querySelector("h4").classList.remove("active");
-    e.target.closest("div").querySelector(".see-more-btn").classList.add("active");
+  collapseText(id: any) {
+    this.expandedCards.splice(this.expandedCards.indexOf(id), 1);
   }
 }
