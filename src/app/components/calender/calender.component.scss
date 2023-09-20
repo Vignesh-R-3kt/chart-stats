@@ -235,10 +235,10 @@
 
 .projects-table {
   overflow: auto;
-  padding: 8px 12px;
   border-radius: 6px;
-  padding-bottom: 14px;
   margin-top: 28px;
+  background: #2B2B4B;
+  padding: 24px;
 
   &::-webkit-scrollbar {
     height: 6px;
@@ -280,12 +280,4 @@ table {
       }
     }
   }
-}
-
-table,
-td,
-th {
-  // color: #ffffff;
-  border: 1px solid #ffffff !important;
-  border-collapse: collapse;
 }
