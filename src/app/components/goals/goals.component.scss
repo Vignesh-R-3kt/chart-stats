@@ -238,6 +238,7 @@
   background: #2b2b4b;
   padding: 24px;
   border-radius: 6px;
+  align-items: flex-start;
 
   .card {
     border-radius: 5px;
@@ -268,7 +269,7 @@
       font-weight: 300;
       display: -webkit-box;
       -webkit-line-clamp: 1;
-      -webkit-box-orient: vertical;  
+      -webkit-box-orient: vertical;
       overflow: hidden;
 
       &.active {
@@ -306,7 +307,8 @@
   background: linear-gradient(270deg, #4d01aa 0.02%, #8038d7 99.98%);
 }
 
-.see-more-btn, .see-less-btn {
+.see-more-btn,
+.see-less-btn {
   display: none;
   text-align: end;
   font-size: 12px;
