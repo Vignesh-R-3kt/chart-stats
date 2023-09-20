@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable } from 'rxjs';
+import { Tracking } from '../components/project-details/project.modal';
 
 @Injectable({
   providedIn: 'root'
@@ -48,5 +49,10 @@ export class ApiService {
  
   deleteGoal(id: number) {
     return this.api.delete(`http://${this.baseUrl}/goals/${id}`);
+  }
+
+  //tracking components data
+  getProjects(): Observable<Tracking[]> {
+    return this.api.get<Tracking[]>(`http://${this.baseUrl}/tracking`);
   }
 }

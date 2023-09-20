@@ -3,7 +3,7 @@
     .tabs {
       display: flex;
       padding: 24px 64px;
-      font-size: 20px;
+      font-size: 18px;
       justify-content: space-evenly;
       border-radius: 6px;
       background: #2b2b4b;
@@ -24,4 +24,9 @@
   font-size: 18px;
   margin-bottom: 10px;
   color: #fff;
+}
+
+.active{
+  font-size: 20px;
+  text-align: center;
 }
