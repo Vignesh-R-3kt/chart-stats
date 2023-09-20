@@ -1,1 +1,29 @@
-<p>tracking works!</p>
+<div class="projects-table">
+    <table id="projectsTable" class="calenderTable">
+      <thead>
+        <tr>
+          <th style="width: 50px;">Sl No</th>
+          <th style="width: 100px;">Name</th>
+          <th style="width: 100px;">Effort Hour</th>
+          <th style="width: 100px;">Remaining</th>
+          <th style="width: 100px;">Progress</th>
+          <th style="width: 150px;">Actual Hours</th>
+          <th style="width: 150px;">Effort Estimate</th>
+          <th style="width: 150px;">Schedule</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of tableData; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ data.name }}</td>
+          <td>{{ data.effortHour }}</td>
+          <td>{{ data.remaining }}</td>
+          <td>{{ data.progress }}</td>
+          <td>{{ data.actualHours }}</td>
+          <td>{{ data.effortEstimate }}</td>
+          <td>{{ data.schedule }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
