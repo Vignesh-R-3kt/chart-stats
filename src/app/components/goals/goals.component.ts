@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input } from '@angular/core';
 import { FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { ApiService } from 'src/app/services/api.service';
 
@@ -18,9 +18,26 @@ function numberValidator(
   styleUrls: ['./goals.component.scss'],
 })
 export class GoalsComponent implements OnInit {
+  
   goals: any[] = [];
   goalColors: any[] = [];
-  expandedCards: any[] = [];
+selectedGoalIndex: number = 0;
+  isDescriptionPopupOpen: boolean = false;
+  selectedGoalDescription: string | null = null;
+  currentColorIndex: number = 0;
+  indexColour: number = 0;
+
+  showDescriptionPopup(description: string, i: number) {
+    this.selectedGoalDescription = description;
+    this.indexColour = i;
+    this.isDescriptionPopupOpen = true;
+    this.currentColorIndex = (this.currentColorIndex + 1) % 4;
+  }
+
+  closeDescriptionPopup() {
+    this.selectedGoalDescription = null;
+    this.isDescriptionPopupOpen = false;
+  }
 
   getGradientClass(index: number): string {
     const gradientClasses = [
@@ -38,7 +55,7 @@ export class GoalsComponent implements OnInit {
   startDate: Date = new Date();
   goalFormVisible: boolean = false;
   newGoal: any = {};
-  constructor(private fb: FormBuilder, private http: ApiService) { }
+  constructor(private fb: FormBuilder, private http: ApiService) {}
 
   goalsForm = this.fb.group({
     goalName: ['', [Validators.required, Validators.minLength(5)]],
@@ -128,11 +145,21 @@ export class GoalsComponent implements OnInit {
     }
   }
 
-  expandText(id: any) {
-    this.expandedCards.push(id);
+  expandText(e: any) {
+    e.target.classList.remove('active');
+    e.target.closest('div').querySelector('h4').classList.add('active');
+    e.target
+      .closest('div')
+      .querySelector('.see-less-btn')
+      .classList.add('active');
   }
 
-  collapseText(id: any) {
-    this.expandedCards.splice(this.expandedCards.indexOf(id), 1);
+  collapseText(e: any) {
+    e.target.classList.remove('active');
+    e.target.closest('div').querySelector('h4').classList.remove('active');
+    e.target
+      .closest('div')
+      .querySelector('.see-more-btn')
+      .classList.add('active');
   }
 }
