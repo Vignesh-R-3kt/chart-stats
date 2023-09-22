@@ -1,4 +1,4 @@
-import { Component, OnInit ,Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { ApiService } from 'src/app/services/api.service';
 
@@ -18,10 +18,10 @@ function numberValidator(
   styleUrls: ['./goals.component.scss'],
 })
 export class GoalsComponent implements OnInit {
-  
+
   goals: any[] = [];
   goalColors: any[] = [];
-selectedGoalIndex: number = 0;
+  selectedGoalIndex: number = 0;
   isDescriptionPopupOpen: boolean = false;
   selectedGoalDescription: string | null = null;
   currentColorIndex: number = 0;
@@ -55,7 +55,7 @@ selectedGoalIndex: number = 0;
   startDate: Date = new Date();
   goalFormVisible: boolean = false;
   newGoal: any = {};
-  constructor(private fb: FormBuilder, private http: ApiService) {}
+  constructor(private fb: FormBuilder, private http: ApiService) { }
 
   goalsForm = this.fb.group({
     goalName: ['', [Validators.required, Validators.minLength(5)]],
