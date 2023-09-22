@@ -9,7 +9,7 @@ export class TrackUserService {
   timer: number = 0;
   timeout: any = setTimeout(() => {
     this.isUserActive.next(false);
-  }, 20000);
+  }, 120000);
 
   constructor() { }
 
@@ -18,7 +18,7 @@ export class TrackUserService {
     clearTimeout(this.timeout);
     this.timeout = setTimeout(() => {
       this.isUserActive.next(false);
-    }, 20000);
+    }, 120000);
   }
 
   setUserAway() {
