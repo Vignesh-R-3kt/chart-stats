@@ -238,7 +238,6 @@
   background: #2b2b4b;
   padding: 24px;
   border-radius: 6px;
-  align-items: flex-start;
 
   .card {
     border-radius: 5px;
@@ -316,5 +315,70 @@
 
   &.active {
     display: block;
+  }
+}
+
+/* Styles for the description popup container */
+.description-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  color: hsl(15, 80%, 2%);
+  padding: 28px 24px 18px;
+  border-radius: 6px;
+  width: 80%;
+  max-width: 400px;
+  position: relative;
+  text-align: center;
+  animation: reveal 0.2s ease forwards;
+
+  p {
+    font-size: 16px;
+    margin: 0;
+    line-height: 26px;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #cccccc;
+  }
+
+  .close-button {
+    background: #ffffff;
+    border: none;
+    padding: 8px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #2b2b4b;
+  }
+}
+
+/* Styles for the "See More" button in the card */
+.see-more-button {
+  cursor: pointer;
+  font-weight: 700;
+  align-self: flex-end;
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+@keyframes reveal {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }

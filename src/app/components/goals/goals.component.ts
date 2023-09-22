@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { ApiService } from 'src/app/services/api.service';
 
@@ -18,9 +18,26 @@ function numberValidator(
   styleUrls: ['./goals.component.scss'],
 })
 export class GoalsComponent implements OnInit {
+
   goals: any[] = [];
   goalColors: any[] = [];
-  expandedCards: any[] = [];
+  selectedGoalIndex: number = 0;
+  isDescriptionPopupOpen: boolean = false;
+  selectedGoalDescription: string | null = null;
+  currentColorIndex: number = 0;
+  indexColour: number = 0;
+
+  showDescriptionPopup(description: string, i: number) {
+    this.selectedGoalDescription = description;
+    this.indexColour = i;
+    this.isDescriptionPopupOpen = true;
+    this.currentColorIndex = (this.currentColorIndex + 1) % 4;
+  }
+
+  closeDescriptionPopup() {
+    this.selectedGoalDescription = null;
+    this.isDescriptionPopupOpen = false;
+  }
 
   getGradientClass(index: number): string {
     const gradientClasses = [
@@ -126,13 +143,5 @@ export class GoalsComponent implements OnInit {
         this.goalFormVisible = false;
       });
     }
-  }
-
-  expandText(id: any) {
-    this.expandedCards.push(id);
-  }
-
-  collapseText(id: any) {
-    this.expandedCards.splice(this.expandedCards.indexOf(id), 1);
   }
 }
