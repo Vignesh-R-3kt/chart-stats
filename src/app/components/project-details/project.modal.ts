@@ -7,4 +7,11 @@ export interface Tracking {
     effortEstimate: number;
     schedule: number;
   }
+
+  export interface estimates {
+    name: string;
+    date: number;
+    hours: number;
+    Cost: number;
+  }
   

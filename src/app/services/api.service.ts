@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable } from 'rxjs';
 import { Tracking } from '../components/project-details/project.modal';
+import { estimates } from '../components/project-details/project.modal';
 
 @Injectable({
   providedIn: 'root'
@@ -54,5 +55,10 @@ export class ApiService {
   //tracking components data
   getProjects(): Observable<Tracking[]> {
     return this.api.get<Tracking[]>(`http://${this.baseUrl}/tracking`);
+  }
+
+  //estimates components data
+  getEstimatesData(): Observable<estimates[]> {
+    return this.api.get<estimates[]>(`http://${this.baseUrl}/estimates`)
   }
 }
