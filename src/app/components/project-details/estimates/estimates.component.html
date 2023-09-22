@@ -1,1 +1,22 @@
-<p>estimates works!</p>
+<div class="projects-table">
+    <table id="projectsTable" class="calenderTable">
+      <thead  class="tableHead">
+        <tr>
+          <th style="width: 50px; text-align: center;">Sl No</th>
+          <th style="width: 100px; text-align: center;">Name</th>
+          <th style="width: 100px; text-align: center;">Date</th>
+          <th style="width: 100px; text-align: center;">No. of hours</th>
+          <th style="width: 100px; text-align: center;">Total cost per day</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of tableData; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ data.name }}</td>
+            <td>{{ data.date }}</td>
+            <td>{{ data.hours }}</td>
+            <td>{{ data.cost }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

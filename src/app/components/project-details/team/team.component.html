@@ -1,1 +1,42 @@
-<p>team works!</p>
+<div *ngIf="profiles.length > 0; else noDataAvailable" class="container">
+        <div class="leftSection">
+            <div class="card" *ngFor="let profile of profiles; let i = index" (click)="toggleProfileDetails(i,profile)"
+                [class.selected]="i === selectedProfileIndex">
+                <div class=" imgWrapper">
+                    <img class="profileImg" [src]="profile.image" alt="">
+                </div>
+                <div class="details">
+                    <h2 class="name">{{ profile.name }}</h2>
+                    <h4 class="designation">{{ profile.designation }}</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="rightSection">
+            <div class="selected-profile-details">
+                <ul class="listItem">
+                    <li class="nameList"><span class="nameRight">Name :</span> <span class="detail">{{
+                            selectedProfile.name
+                            }}</span></li>
+                    <li class="nameList"><span class="nameRight">Designation :</span><span class="detail">{{
+                            selectedProfile.designation }}</span></li>
+                    <li class="nameList"><span class="nameRight">Time Zone :</span><span class="detail">{{
+                            selectedProfile.timeZone }}</span></li>
+                    <li class="nameList"><span class="nameRight">Experience :</span><span class="detail">{{
+                            selectedProfile.experience }}</span></li>
+                    <li class="nameList"><span class="nameRight">Location :</span><span class="detail">{{
+                            selectedProfile.location }}</span></li>
+                    <li class="nameList"><span class="nameRight">Employee ID :</span><span class="detail">{{
+                            selectedProfile.employeeId }}</span></li>
+                    <li class="nameList"><span class="nameRight">Primary Email :</span><span class="detail">{{
+                            selectedProfile.primaryEmail }}</span></li>
+                </ul>
+            </div>
+        </div>
+</div>
+
+<ng-template #noDataAvailable>
+    <div class="no-data-message">
+      No data available.
+    </div>
+  </ng-template>
