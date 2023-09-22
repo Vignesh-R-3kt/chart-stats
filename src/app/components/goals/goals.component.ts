@@ -144,22 +144,4 @@ selectedGoalIndex: number = 0;
       });
     }
   }
-
-  expandText(e: any) {
-    e.target.classList.remove('active');
-    e.target.closest('div').querySelector('h4').classList.add('active');
-    e.target
-      .closest('div')
-      .querySelector('.see-less-btn')
-      .classList.add('active');
-  }
-
-  collapseText(e: any) {
-    e.target.classList.remove('active');
-    e.target.closest('div').querySelector('h4').classList.remove('active');
-    e.target
-      .closest('div')
-      .querySelector('.see-more-btn')
-      .classList.add('active');
-  }
 }
