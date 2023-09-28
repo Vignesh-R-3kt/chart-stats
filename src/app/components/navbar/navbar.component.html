@@ -48,7 +48,7 @@
                                 Projects
                             </mat-panel-title>
                         </mat-expansion-panel-header>
-                        <ul class="dropdown-toggle-items">
+                        <ul class="dropdown-toggle-items" [class.active]="expandNavbarFlag">
                             <li routerLinkActive="active" *ngFor="let project of projects" (click)="closeDropdown()"
                                 routerLink="/main-body/projects/{{project}}">
                                 <a>{{project}}</a>

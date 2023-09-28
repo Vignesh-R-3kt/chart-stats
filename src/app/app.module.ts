@@ -15,6 +15,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthGuard } from './services/auth-guard.service';
 import { AuthLoginGuard } from './services/auth-login.service';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +34,8 @@ import { AuthLoginGuard } from './services/auth-login.service';
     MatExpansionModule,
     DataTablesModule,
     HighchartsChartModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [AuthGuard, AuthLoginGuard],
   bootstrap: [AppComponent],

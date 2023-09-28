@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LoaderService } from 'src/app/services/loader.service';
 import { TrackUserService } from 'src/app/services/track-user.service';
+import { SharedService } from '../../services/shared.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,12 +12,13 @@ import { TrackUserService } from 'src/app/services/track-user.service';
 export class NavbarComponent implements OnInit {
   panelOpenState: boolean = false;
   dropdownOpen: boolean = false;
+  expandNavbarFlag: boolean = false;
   selectedDropdownItem: string = 'Profile-details';
   projects: any = ["EIC", "Persistent", "Roche", "3KT_Administration", "Armorcode"];
   user: any;
   userActive: boolean = true;
 
-  constructor(private router: Router, private loader: LoaderService, private route: ActivatedRoute, private userTrack: TrackUserService) { }
+  constructor(private router: Router, private loader: LoaderService, private route: ActivatedRoute, private userTrack: TrackUserService, private sharedService: SharedService) { }
 
   ngOnInit(): void {
     const userDetails: any = window.sessionStorage.getItem("user");
@@ -24,6 +26,14 @@ export class NavbarComponent implements OnInit {
     this.userTrack.isUserActive.subscribe((res: any) => {
       this.userActive = res;
     })
+    // this.sharedService.expandArrowEvent.subscribe(() => {
+    //   console.log("----------eventemitter------");
+    //   this.closeDropdown();
+    // });
+    this.sharedService.submitButtonClicked$.subscribe(() => {
+      this.expandNavbarFlag = true; // Expand the navbar when the button is clicked
+      this.panelOpenState = true;
+    });
   }
 
   toggleDropdown() {
@@ -31,10 +41,12 @@ export class NavbarComponent implements OnInit {
   }
 
   closeDropdown() {
+    console.log("---------closeDropdown--------");
     this.dropdownOpen = false;
   }
 
   selectDropdownItem(item: string): void {
+    console.log("---------selectDropdownItem--------");
     this.selectedDropdownItem = item;
     this.dropdownOpen = false;
     if (this.selectedDropdownItem === "Logout") {
