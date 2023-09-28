@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ProjectDetailsComponent } from './components/project-details/project-details.component';
 import { AuthGuard } from './services/auth-guard.service';
 import { AuthLoginGuard } from './services/auth-login.service';
 
@@ -18,7 +19,11 @@ const routes: Routes = [
       ),
     canActivate: [AuthGuard]
   },
-  { path: "**", redirectTo: "login" }
+  { path: "**", redirectTo: "login" },
+  {
+    path: 'main-body/projects/:searchterm/summary',
+    component: ProjectDetailsComponent,
+  },
 ];
 
 @NgModule({

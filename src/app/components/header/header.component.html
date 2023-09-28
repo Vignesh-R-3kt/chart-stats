@@ -3,8 +3,15 @@
         <div class="header-items">
             <a class="main-logo"><img src="../../../assets/images/category-icon.png" alt="logo"></a>
             <div class="input-wrapper">
-                <input type="text">
-                <img src="../../../assets/images/search-icon.png" alt="search-icon">
+                <input type="text" [(ngModel)]="searchInput" (keydown.enter)="navigateToProjectsSummary()" (input)="filterProjects()">
+                <a class="submit-btn" (click)="navigateToProjectsSummary()">
+                  <img src="../../../assets/images/search-icon.png" alt="search-icon">
+                </a>
+                <ul class="suggestions" *ngIf="filteredProjects.length > 0">
+                    <li *ngFor="let suggestion of filteredProjects" (click)="selectSuggestion(suggestion)">
+                      {{ suggestion }}
+                    </li>
+                </ul>
             </div>
             <a class="call-btn">
                 <img src="../../../assets/images/call-icon.png" alt="call-icon">
